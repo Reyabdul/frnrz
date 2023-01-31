@@ -1,0 +1,45 @@
+.footer {
+    display: flex;
+    height: 13vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+  
+.footer .column {
+  flex: 1;
+}
+
+.footer .column .video-reel-container {
+    display: flex;
+    height: 100%;
+}
+
+.icon-container {
+    max-width: 100%;
+    padding: 0 1rem;
+    border-right: 6px solid #000;
+}
+
+.footer .column .video-reel-container .icon-container img {
+    max-width: 7rem;
+}
+
+.footer .column .video-reel-container marquee h1 {
+    margin: 0;
+    font-size: 4em;
+}
+
+.footer .column .copyright-container {
+    display: flex;
+    height: 100%;
+    padding: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.footer .column .copyright-container li {
+    list-style: none;
+}

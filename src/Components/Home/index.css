@@ -1,0 +1,33 @@
+.page .home {
+    display: flex;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+.home .column {
+  flex: 1;
+  height: 100vh;
+}
+
+.home .column .about-section {
+  display: block;
+}
+
+.home .column .about-section img {
+  width: 100%;
+}
+
+.home .column
+.about-section .about-preview-info h1 {
+  font-size: 3em;
+  margin-top: 0;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) { /*breakpoint*/
+  .page {
+    flex-direction: column;
+  }
+}

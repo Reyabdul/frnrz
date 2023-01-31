@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "BODY";
+    src: url("../src/Assets/RobotoMono-Regular.ttf");
+}
+
+@font-face {
+    font-family: "HEADING";
+    src: url("../src/Assets/Nimbus_Sans_Becker_PBla_Regular.otf");
+}
+
+:root {
+    /*container stuff*/
+    --border-thickness: 3px solid #000;
+    
+    /*font stuff*/
+    --heading-text: "HEADING";
+    --body-text: "BODY";
+    
+    --heading-primary-color: #FFFF26;
+    --heading-secondary-color: #fff;
+
+    --body-primary-color: #fff;
+    --body-secondary-color: #000;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+    background-color: #300350;
+}
+
+.column {
+    border: var(--border-thickness);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-primary-color);
+    font-family: var(--heading-text);
+    font-weight: normal;
+}
+
+p, li {
+    font-family: var(--body-text);
+}

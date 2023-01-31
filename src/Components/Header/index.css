@@ -1,0 +1,39 @@
+.header nav {
+    display: flex;
+    height: 13vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+  
+.header .column {
+  flex: 1;
+}
+
+.header .column .logo-container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header .column .contact-info-container {
+    display: flex;
+    padding: 0.5rem;
+    justify-content: center;
+    color: #fff;
+}
+
+.header .column .contact-info-container li {
+    list-style: none;
+}
+
+.header .column .contact-info-container img {
+    max-width: 6rem;
+}
+
+.header .column .logo-container img {
+    max-width: 100%;
+}
