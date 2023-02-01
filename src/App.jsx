@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 import Footer from "./Components/Footer";
+import VideoReel from "./Components/VideoReel/index";
 import "./root.css";
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
                 <Home />
             </div>
             <Footer />
+            <VideoReel />
         </>
     )
 }

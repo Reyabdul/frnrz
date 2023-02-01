@@ -27,6 +27,8 @@ body, html {
     padding: 0;
     margin: 0;
     background-color: #300350;
+    overflow-x: hidden;
+    cursor: url("../src/Assets/media/misc/peacock_logo.png"), default;
 }
 
 .column {
