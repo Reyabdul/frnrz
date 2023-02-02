@@ -31,7 +31,8 @@
 }
 
 .header .column .contact-info-container img {
-    max-width: 6rem;
+    max-width: 10vw;
+    margin-left: 10vw;
 }
 
 .header .column .logo-container img {

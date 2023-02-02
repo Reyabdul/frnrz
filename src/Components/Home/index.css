@@ -24,6 +24,7 @@
   font-size: 3em;
   margin-top: 0;
   padding: 1rem;
+  color: #fff;
 }
 
 .home .column .projects-section {
@@ -51,6 +52,7 @@
 }
 
 .home .column .projects-section span {
+  text-transform: uppercase;
   font-size: x-large;
 }
 
@@ -63,13 +65,13 @@
 
 .home .column .projects-section div {
   padding: 1rem 0;
-  border-bottom: 3px solid #000;
+  border-bottom: 1px solid #000;
 }
 
 .services-section {
   margin-top: 20vh;
   display: flex;
-  border-top: 3px solid #000;
+  border-top: 1px solid #000;
 }
 
 .services-section h1 {
@@ -82,18 +84,21 @@
 
 .services-section li {
   font-size: x-large;
-  color:#FFFF26;
   padding: 0.3rem 0;
   cursor: pointer;
 }
 
 .vision-section {
-  border-bottom: 3px solid #000;
+  border-bottom: 1px solid #000;
 }
 
 .vision-section h1 {
   margin: 0;
   font-size: 6em;
+}
+
+.gallery-section video {
+  width: 100%;
 }
 
 .gallery-section img {

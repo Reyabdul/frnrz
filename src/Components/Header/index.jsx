@@ -40,12 +40,12 @@ const Header = () => {
                     </div>
                     <div className="column">
                         <div className="contact-info-container">
-                            <img src={contactLogo} />
                             <ul>
                                 <li>info@frnrz.com</li>
                                 <li>@sansfuccs</li>
                                 <li>CALGARY | TORONTO</li>
                             </ul>
+                            <img src={contactLogo} />
                         </div>
                     </div>
                 </nav>

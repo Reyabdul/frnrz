@@ -10,7 +10,7 @@
 
 :root {
     /*container stuff*/
-    --border-thickness: 3px solid #000;
+    --border-thickness: 1px solid #000;
     
     /*font stuff*/
     --heading-text: "HEADING";
@@ -39,8 +39,11 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--heading-primary-color);
     font-family: var(--heading-text);
     font-weight: normal;
+    text-transform: uppercase;
 }
 
 p, li {
+    color: var(--body-primary-color);
     font-family: var(--body-text);
+    text-transform: capitalize;
 }
