@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./index.css";
 
 import contactLogo from "../../Assets/media/misc/peacock_logo.png";
@@ -35,9 +36,7 @@ const Header = () => {
                             <img src={logoArray[logoCount]} alt="home-logo" />
                         </div>
                     </div>
-                    <div className="column">
-
-                    </div>
+                    <div className="column"></div>
                     <div className="column">
                         <div className="contact-info-container">
                             <ul>
