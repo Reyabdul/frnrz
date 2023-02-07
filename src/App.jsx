@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Header from "./Components/Header";
 import About from "./Components/About";
 import Footer from "./Components/Footer";
-import VideoReel from "./Components/VideoReel/index";
+import VideoReel from "./Components/VideoReel";
 import "./root.css";
 
 import sanityClient from "./client";
@@ -12,8 +12,6 @@ import bullHead from "./Assets/media/static_media/about/bullhead.png";
 import dragon from "./Assets/media/static_media/about/dragon.png";
 import peacockHead from "./Assets/media/static_media/about/peacockhead.png";
 import galleryVideo from "./Assets/media/static_media/gallery/video-reel.mp4";
-
-import { Link } from "react-router-dom";
 
 const App = () => {
     const [imageCount, setImageCount] = useState(0);
