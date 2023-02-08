@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from "react";
 
+//React router Dom
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 import Header from "./Components/Header";
 import About from "./Components/About";
 import Footer from "./Components/Footer";
 import VideoReel from "./Components/VideoReel";
 import "./root.css";
+
+//Routes
+import Gallery from "./Routes/Gallery/Index"
 
 import sanityClient from "./client";
 
@@ -50,72 +57,87 @@ const App = () => {
     }, [])
     return (
         <>
-            <Header />
-            <div className="page">
-            <div className="home">
-                <div className="column">
-                    <section className="about-section">
-                        <img src={imageArray[imageCount]} />
-                        <article className="about-preview-info">
-                            <h1>
-                            FOREIGNERZ is an art and production house focused on pushing boundaries in film, music, art and culture. 
-                            </h1>
-                        </article>
-                    </section>
+            <BrowserRouter>
+                <Header />
+
+                {/*Routes*/}
+
+
+                <div className="page">
+                <div className="home">
+                    <div className="column">
+                        <section className="about-section">
+                            <img src={imageArray[imageCount]} />
+                            <article className="about-preview-info">
+                           <Link to="/gallery">service </Link>
+
+                                <h1>
+                                FOREIGNERZ is an art and production house focused on pushing boundaries in film, music, art and culture. 
+                                </h1>
+                            </article>
+                        </section>
+                    </div>
+                    <div className="column">
+                        <section className="projects-section">
+                            <ul>
+                                <li>
+                                    <div className="project-row">
+                                        <h1> Projects </h1>
+                                    </div>
+                                </li>
+                                {projectData.map((media) => {
+                                    return (
+                                        <li>
+                                            <div className="projects-row">
+                                                <span className="video-time">{media.project_media[0].video_time_duration}</span>
+                                                <span> {media.project_title} </span>
+                                            </div>
+                                        </li>
+                                    )
+                                })}
+                            </ul>
+                        </section>
+                        <section className="services-section">
+                            <ul>
+                                <li>
+                                    <h1> Services </h1>
+                                </li>
+                                <li> service </li>
+                                <li> service </li>
+                                <li> service </li>
+                                <li> service </li>
+
+                            </ul>
+                            <div className="service-preview"></div>
+                        </section>
+                    </div>
+                    <div className="column">
+                        <section className="vision-section">
+                            <div className="vision-title">
+                                <marquee width="130%" direction="left" vspace="20" scrollamount="25">
+                                    <h1> 2023 VISION : WE ARE ALL FOREIGNERZ. ONLY ART FROM THE GLOBAL UNDERGROUND WILL MOVE US FORWARD. </h1>
+                                </marquee> 
+                            </div>
+                        </section>
+                        <section className="gallery-section">
+                            <div className="gallery-preview-container">
+                                <Link to="/gallery">
+                                <video autoPlay muted loop>
+                                    <source src={galleryVideo} type="video/mp4" />
+                                </video>
+                                </Link>
+                            </div>
+                        </section>
+                    </div>
                 </div>
-                <div className="column">
-                    <section className="projects-section">
-                        <ul>
-                            <li>
-                                <div className="project-row">
-                                    <h1> Projects </h1>
-                                </div>
-                            </li>
-                            {projectData.map((media) => {
-                                return (
-                                    <li>
-                                        <div className="projects-row">
-                                            <span className="video-time">{media.project_media[0].video_time_duration}</span>
-                                            <span> {media.project_title} </span>
-                                        </div>
-                                    </li>
-                                )
-                            })}
-                        </ul>
-                    </section>
-                    <section className="services-section">
-                        <ul>
-                            <li>
-                                <h1> Services </h1>
-                            </li>
-                            <li> service </li>
-                            <li> service </li>
-                            <li> service </li>
-                            <li> service </li>
-                        </ul>
-                        <div className="service-preview"></div>
-                    </section>
                 </div>
-                <div className="column">
-                    <section className="vision-section">
-                        <div className="vision-title">
-                            <marquee width="130%" direction="left" vspace="20" scrollamount="25">
-                                <h1> 2023 VISION : WE ARE ALL FOREIGNERZ. ONLY ART FROM THE GLOBAL UNDERGROUND WILL MOVE US FORWARD. </h1>
-                            </marquee> 
-                        </div>
-                    </section>
-                    <section className="gallery-section">
-                        <div className="gallery-preview-container">
-                            <video autoPlay muted loop>
-                                <source src={galleryVideo} type="video/mp4" />
-                            </video>
-                        </div>
-                    </section>
-                </div>
-            </div>
-            </div>
-            <Footer />
-            <VideoReel />
+                <Routes>
+                    <Route path="/gallery" element={<Gallery />} />
+                </Routes>
+                <Footer />
+                    <VideoReel />
+
+            </BrowserRouter>
         </>
     )
 }

@@ -1,10 +1,10 @@
 import React from "react";
-import "./index.css";
+import "./Index.css";
 
 const Gallery = () => {
     return (
         <>
-            <div>
+            <div className="gallery__container">
                 <h1> Gallery </h1>
             </div>
         </>
