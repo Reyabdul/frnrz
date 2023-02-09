@@ -1,0 +1,79 @@
+.about-container {
+    display: flex;
+}
+
+.about-container .column .about-description {
+    border: none !important;
+    margin: 1rem;
+    padding: 2rem;
+}
+
+.about-container .column .about-description, .clients {
+    background-color: rgba(249, 172, 83, 0.5);
+    border-radius: 20px;
+}
+
+.about-container .column .about-description h1,
+.clients-container .row .clients h1 {
+    color: #fff;
+    font-size: xxx-large;
+    margin-bottom: 0;
+}
+
+.about-container .column .about-description h3 {
+    margin: 0;
+    color: #fff;
+    font-family: var(--body-text);
+}
+
+.about-container .column .about-description img {
+    position: relative;
+    transform: rotate(90deg);
+    scale: 2;
+    align-self: center;
+    max-width: 40%;
+}
+
+.about-container .column:nth-child(2) .about-description h3 {
+    font-family: var(--heading-text);
+    font-size: x-large;
+}
+
+.about-container .column:nth-child(1) .about-description {
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+}
+
+.about-container .column:nth-child(1) .about-description .starter-text {
+    color: #F9AC53;
+}
+
+.about-container .column:nth-child(2) .about-description .starter-text {
+    color: #FF0094;
+}
+
+.clients-container .row {
+    margin: 1rem;
+    padding: 0;
+}
+
+.clients-container .row .clients {
+    padding: 1rem;
+}
+
+.clients-container .row .clients ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.clients-container .row .clients li {
+    margin: 10px;
+}
+
+.clients-container .row .clients ul li img {
+    width: 100%;
+}

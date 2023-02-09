@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../../root.css";
+import "./index.css";
 
 import sanityClient from "../../client";
 
@@ -51,24 +51,26 @@ const Home = () => {
                 <div className="home">
                     <div className="column">
                         <section className="about-section">
-                            <img src={imageArray[imageCount]} />
-                            <article className="about-preview-info">
-                           <Link to="/gallery">service </Link>
-
-                                <h1>
-                                FOREIGNERZ is an art and production house focused on pushing boundaries in film, music, art and culture. 
-                                </h1>
-                            </article>
+                            <Link to="/about">
+                                <img src={imageArray[imageCount]} />
+                                <article className="about-preview-info">
+                                    <h1>
+                                    FOREIGNERZ is an art and production house focused on pushing boundaries in film, music, art and culture. 
+                                    </h1>
+                                </article>
+                            </Link>
                         </section>
                     </div>
                     <div className="column">
                         <section className="projects-section">
                             <ul>
-                                <li>
-                                    <div className="project-row">
-                                        <h1> Projects </h1>
-                                    </div>
-                                </li>
+                                <Link to="/projects">
+                                    <li>
+                                        <div className="project-row">
+                                            <h1> Projects </h1>
+                                        </div>
+                                    </li>
+                                </Link>
                                 {projectData.map((media) => {
                                     return (
                                         <li>
@@ -107,9 +109,9 @@ const Home = () => {
                             <div className="gallery-preview-container">
                                 {/*Using Link rather than 'a tag elements. Refer to App.js to ensure 'Link' corresponds to what is in App.js */}
                                 <Link to="/gallery">
-                                <video autoPlay muted loop>
-                                    <source src={galleryVideo} type="video/mp4" />
-                                </video>
+                                    <video autoPlay muted loop>
+                                        <source src={galleryVideo} type="video/mp4" />
+                                    </video>
                                 </Link>
                             </div>
                         </section>

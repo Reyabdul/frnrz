@@ -9,6 +9,11 @@ export default {
             title: "Project title",
         },
         {
+            name: "project_cover",
+            type: "image",
+            title: "Project Cover Image",
+        },
+        {
             name: "project_media",
             type: "array",
             title: "Project media",
@@ -68,6 +73,17 @@ export default {
             name: "project_description",
             type: "string",
             title: "Project description"
+        },
+        {
+            name: "project_year",
+            type: "string",
+            title: "Project Year"
+        },
+        {
+            name: "project_roles",
+            type: "array",
+            title: "Roles in this project. e.g. Director: Contra or Directed By: Contra",
+            of: [{type: "string"}]
         }
     ]
 }

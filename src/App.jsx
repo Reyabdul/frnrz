@@ -12,7 +12,8 @@ import "./root.css";
 //Routes
 import Gallery from "./Routes/Gallery/Index"
 import About from "./Routes/About";
-import Home from "./Routes/Home/Home";
+import Home from "./Routes/Home";
+import Projects from "./Routes/Projects";
 
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/gallery" element={<Gallery />} />
+                    <Route path="/projects" element={<Projects />} />
                 </Routes>
                 <Footer />
                 <VideoReel />

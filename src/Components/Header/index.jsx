@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./index.css";
 
 import contactLogo from "../../Assets/media/misc/peacock_logo.png";
@@ -32,9 +32,11 @@ const Header = () => {
             <div className="header">
                 <nav>
                     <div className="column">
-                        <div className="logo-container">
-                            <img src={logoArray[logoCount]} alt="home-logo" />
-                        </div>
+                        <Link exact to="/">
+                            <div className="logo-container">
+                                <img src={logoArray[logoCount]} alt="home-logo" />
+                            </div>
+                        </Link>
                     </div>
                     <div className="column"></div>
                     <div className="column">
