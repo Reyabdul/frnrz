@@ -38,9 +38,9 @@ const Gallery = () => {
         <div className="gallery__container grid">
             {imgGalleryArr.map((img, i) => {
                 return(
-                    
-                    <div key={i} className="masonry-item">
+                    <div>
                         <img
+                            key={i}
                             className="masonry-content"
                             src={img}
                         />
