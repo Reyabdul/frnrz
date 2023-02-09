@@ -22,7 +22,7 @@ const App = () => {
         <>
             <BrowserRouter>
                 <Header />
-                {/*Routes - path relevant to 'Routes' folder and not the 'Components' folder  */}
+                {/*Routes - path relevant to 'Routes' folder and not the 'Component' folder  */}
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />

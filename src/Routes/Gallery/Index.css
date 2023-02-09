@@ -1,3 +1,16 @@
-.gallery__container {
-    color: blue;
+.grid {
+    column-count: 4;
+    gap: 0;
+    max-width: 100vw;
+    margin: auto;
+    width: 100%;
+    grid-template-rows: masonry;
+
+  }
+  
+
+
+.masonry-content{
+    height: 100%;
+    max-width: 100%;
 }
