@@ -26,7 +26,7 @@ import image21 from "../../Assets/Images/SRDF_66.jpg";
 import image22 from "../../Assets/Images/SRDF_70.jpg";
 
 
-
+  
 
 const Gallery = () => {
 
