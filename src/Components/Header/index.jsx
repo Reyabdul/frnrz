@@ -27,12 +27,22 @@ const Header = () => {
         }
     }, [])
 
+    const galleryUrlChecker = (url) => {
+        if (url.indexOf("/gallery") !== -1) {
+            document.querySelector(".footer").classList.add("fixed-footer");
+            document.querySelector(".header").classList.add("fixed-header");
+        } else {
+            document.querySelector(".footer").classList.remove("fixed-footer");
+            document.querySelector(".header").classList.remove("fixed-header");
+        }
+    }
+
     return (
         <>
             <div className="header">
                 <nav>
                     <div className="column">
-                        <Link exact to="/">
+                        <Link exact to="/" onClick={(e) => {setTimeout(() => {galleryUrlChecker(window.location.href)}, 300)}}>
                             <div className="logo-container">
                                 <img src={logoArray[logoCount]} alt="home-logo" />
                             </div>
