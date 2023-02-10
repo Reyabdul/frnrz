@@ -47,7 +47,7 @@ const Home = () => {
 
     return (
         <>
-                <div className="page">
+            <main className="page">
                 <div className="home">
                     <div className="column">
                         <section className="about-section">
@@ -86,25 +86,26 @@ const Home = () => {
                         <section className="services-section">
                             <ul>
                                 <li>
-                                    <h1> Services </h1>
+                                    <Link to="/services"><h1> Services </h1></Link>
                                 </li>
-                                <li> service </li>
-                                <li> service </li>
-                                <li> service </li>
-                                <li> service </li>
-
+                                <li> - Visual & Film Production </li>
+                                <li> - Event Production </li>
+                                <li> - Art Production & Artist Management </li>
+                                <li> - Creative Services </li>
                             </ul>
                             <div className="service-preview"></div>
                         </section>
                     </div>
                     <div className="column">
-                        <section className="vision-section">
-                            <div className="vision-title">
-                                <marquee width="130%" direction="left" vspace="20" scrollamount="25">
-                                    <h1> 2023 VISION : WE ARE ALL FOREIGNERZ. ONLY ART FROM THE GLOBAL UNDERGROUND WILL MOVE US FORWARD. </h1>
-                                </marquee> 
-                            </div>
-                        </section>
+                        <Link to="/vision">
+                            <section className="vision-section">
+                                <div className="vision-title">
+                                    <marquee width="130%" direction="left" vspace="20" scrollamount="25">
+                                        <h1> 2023 VISION : WE ARE ALL FOREIGNERZ. ONLY ART FROM THE GLOBAL UNDERGROUND WILL MOVE US FORWARD. </h1>
+                                    </marquee> 
+                                </div>
+                            </section>
+                        </Link>
                         <section className="gallery-section">
                             <div className="gallery-preview-container">
                                 {/*Using Link rather than 'a tag elements. Refer to App.js to ensure 'Link' corresponds to what is in App.js */}
@@ -117,8 +118,8 @@ const Home = () => {
                         </section>
                     </div>
                 </div>
-                </div>
-    </>
+            </main>
+        </>
     )
 }
 export default Home;

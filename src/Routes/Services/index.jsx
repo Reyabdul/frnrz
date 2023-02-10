@@ -4,9 +4,9 @@ import "./index.css";
 const Services = () => {
     return (
         <>
-            <div>
-                <h1> Services </h1>
-            </div>
+            <main className="services-container">
+               
+            </main>
         </>
     )
 }

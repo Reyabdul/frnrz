@@ -2,15 +2,23 @@
     display: flex;
 }
 
+.about-container .column {
+    border: none;
+}
+
 .about-container .column .about-description {
     border: none !important;
     margin: 1rem;
     padding: 2rem;
 }
 
-.about-container .column .about-description, .clients {
+.about-container .column .about-description {
     background-color: rgba(249, 172, 83, 0.5);
     border-radius: 20px;
+}
+
+.about-container .clients {
+    background-color: rgba(48, 3, 80, 0.5);
 }
 
 .about-container .column .about-description h1,

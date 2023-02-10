@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import VideoReel from "./Components/VideoReel";
+// import Blob from "./Components/Blob";
 import "./root.css";
 
 //Routes
@@ -14,10 +15,11 @@ import Gallery from "./Routes/Gallery/Index"
 import About from "./Routes/About";
 import Home from "./Routes/Home";
 import Projects from "./Routes/Projects";
+import Vision from "./Routes/Vision";
+import Services from "./Routes/Services";
 
 
 const App = () => {
-
     return (
         <>
             <BrowserRouter>
@@ -28,7 +30,10 @@ const App = () => {
                     <Route path="/about" element={<About />} />
                     <Route path="/gallery" element={<Gallery />} />
                     <Route path="/projects" element={<Projects />} />
+                    <Route path="/vision" element={<Vision />} />
+                    <Route path="/services" element={<Services />} />
                 </Routes>
+                {/* <Blob /> */}
                 <Footer />
                 <VideoReel />
             </BrowserRouter>
