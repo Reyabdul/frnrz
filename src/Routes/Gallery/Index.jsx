@@ -33,21 +33,28 @@ const Gallery = () => {
     const imgGalleryArr = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image12, image13, image14, image15, image16, image17, image18, image19, image20, image21, image22]
 
 
-
     return (
-        <div className="gallery__container grid">
-            {imgGalleryArr.map((img, i) => {
-                return(
-                    <div>
-                        <img
-                            key={i}
-                            className="masonry-content"
-                            src={img}
-                        />
-                    </div>
-                )
-             }
-            )}
+        <div className="gallery-container grid">
+            <div className="gallery__container grid">
+                
+                
+                {imgGalleryArr.map((img) => ({ img, sort: Math.random()  }))
+                .sort((a, b) => a.sort - b.sort)
+                .map(({img}, i) => {
+                    return(
+                        <div className="masonry-item">
+                            <img
+                                key={i}
+                                src={img}
+                                className="masonry-content"
+                            />
+                        </div>
+                    )
+                })
+
+                }
+
+            </div>
         </div>
     )
 };

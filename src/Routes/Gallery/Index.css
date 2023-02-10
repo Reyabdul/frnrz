@@ -1,21 +1,51 @@
-.grid {
-    column-count: 4;
-    grid-gap: 0px;
-    max-width: 100%;
+/*Global*/
+:root {
+    counter-reset: masonry;
+}
+
+.gallery-container{
+    width: 100vw;
     height: 100%;
-    padding: 0;
-    margin: 0;
+}
+
+.gallery__container.grid {
+    column-count: 4;
+    column-gap: 0;
+    row-gap: 0;
+    max-width: 100%;
+    margin: 0 auto;
     width: 100%;
-    grid-template-rows: masonry;
-    align-tracks: stretch;
+    justify-content: space-;
   }
-  
+ 
+
 .masonry-item {
     margin: 0;
     padding: 0;
+    object-fit: cover;
 }
 
 .masonry-content{
-    max-height: 100%;
+    height: 100%;
     max-width: 100%;
+}
+
+/*-----------MEDIA QUERY--------*/
+/*BREAK POINTS*/
+@media(max-width: 800px) {
+    .gallery__container.grid {
+      column-count: 3;
+  }
+}
+
+@media(max-width: 600px) {
+    .gallery__container.grid  {
+      column-count: 2;
+  }
+}
+
+@media(max-width: 400px) {
+    .gallery__container.grid  {
+      column-count: 1;
+  }
 }

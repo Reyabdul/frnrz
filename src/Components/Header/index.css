@@ -1,6 +1,9 @@
+
 .header nav {
     display: flex;
     height: 13vh;
+    background-color: #300350;
+    position: fixed;
 }
 
 * {

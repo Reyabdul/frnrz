@@ -1,8 +1,12 @@
 .footer {
     display: flex;
     height: 13vh;
-    position: relative;
     z-index: 9;
+    background-color: #300350;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
 }
 
 * {
@@ -11,6 +15,7 @@
   
 .footer .column {
   flex: 1;
+  
 }
 
 .footer .column .video-reel-section {
@@ -34,6 +39,7 @@
     font-size: 4em;
 }
 
+
 .footer .column .copyright-section {
     display: flex;
     height: 100%;
@@ -41,6 +47,7 @@
     justify-content: center;
     align-items: center;
     color: #fff;
+
 }
 
 .footer .column .copyright-section li {
