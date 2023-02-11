@@ -29,7 +29,7 @@ const LoadingScreen = () => {
 
         <>
             <div className="loading-screen">
-                <video id="loading-video" autoPlay={true} muted loop={true}></video> {/*onEnded={hideLoadingScreen}*/}
+                <video id="loading-video" autoPlay={true} muted loop={true} preload="none"></video> {/*onEnded={hideLoadingScreen}*/}
             </div>
         </>
 
