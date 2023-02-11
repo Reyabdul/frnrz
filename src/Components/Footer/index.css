@@ -50,3 +50,71 @@
 .footer .column .copyright-section li {
     list-style: none;
 }
+/*BREAKPOINTS*/
+@media (max-width: 800px) {
+
+}
+
+@media (max-width: 600px) {
+
+}
+
+@media all and (max-width: 400px) {
+
+    .footer {
+        display: flex;
+        height: 17%;
+        z-index: 12;
+        background-color: #300350;
+        width: 100vw;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+      
+    .footer .column {
+        display: block;
+      flex: 1 0 100%;
+    }
+    
+    .footer .column .video-reel-section {
+        display: flex;
+        height: 100%;
+    }
+    
+    .icon-container {
+        max-width: 100%;
+        padding: 0 1rem;
+        cursor: pointer;
+        border-right: 2px solid #000;
+    }
+    
+    .footer .column .video-reel-section .icon-container img {
+        max-width: 7rem;
+    }
+    
+    .footer .column .video-reel-section marquee h1 {
+        margin: 0;
+        font-size: 4em;
+    }
+    
+    
+    .footer .column .copyright-section {
+        display: flex;
+        height: 100%;
+        padding: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        position: relative;
+        bottom: 0;
+        left: 0;
+    
+    }
+    
+    .footer .column .copyright-section li {
+        list-style: none;
+    }
+
+}

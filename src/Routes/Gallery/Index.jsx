@@ -38,7 +38,7 @@ const Gallery = () => {
             <div className="gallery__container grid">
                 
                 
-                {imgGalleryArr.map((img) => ({ img, sort: Math.random()  }))
+                {imgGalleryArr.map((img, j) => ({ img, sort: Math.random()  }))
                 .sort((a, b) => a.sort - b.sort)
                 .map(({img}, i) => {
                     return(

@@ -47,3 +47,42 @@ a {
     max-width: 100%;
     object-fit: contain;
 }
+
+/*BREAKPOINTS*/
+@media (max-width: 800px) {
+    .header nav {
+        display: flex;
+        height: 13vh;
+        background-color: #300350;
+    }    
+  }
+  
+  @media (max-width: 600px) {
+
+  }
+  
+  @media all and (max-width:400px) {
+
+    * {
+        box-sizing: border-box;
+    }
+    
+
+    .header nav {
+        display: flex;
+        height: 13vh;
+        background-color: #300350;
+        
+    }  
+
+    .header .column {
+        flex: 1 0 100%;
+        padding: 2rem
+    }
+
+    .header .column .logo-container img {
+        max-width: 80%;
+        object-fit: contain;
+    }
+}
+  
