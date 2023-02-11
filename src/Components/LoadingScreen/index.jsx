@@ -13,7 +13,7 @@ const LoadingScreen = () => {
 
         <>
             <div className="loading-screen">
-                <video id="loading-video" autoPlay={true} muted loop={true} preload="none">
+                <video id="loading-video" autoPlay={true} muted loop={true} preload="none" playsInline>
                     <source src={loadingVideo_MOBILE} type="video/mp4" />    
                 </video> {/*onEnded={hideLoadingScreen}*/}
             </div>
