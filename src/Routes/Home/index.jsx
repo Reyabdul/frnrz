@@ -49,7 +49,15 @@ const Home = () => {
     }, []);
 
     const galleryUrlChecker = (url) => {
-        if (url.indexOf("/gallery") !== -1) {
+        let deviceOrientation = "";
+
+        if (window.innerWidth <= 500) {
+            deviceOrientation = "mobile";
+        } else {
+            deviceOrientation = "desktop";
+        }
+
+        if (url.indexOf("/gallery") !== -1 && deviceOrientation === "desktop") {
             document.querySelector(".footer").classList.add("fixed-footer");
             document.querySelector(".header").classList.add("fixed-header");
         } else {
@@ -68,7 +76,7 @@ const Home = () => {
 
     return (
         <>
-            {/* <LoadingScreen /> */}
+            <LoadingScreen />
             <main className="page">
                 <div className="home">
                     <div className="column">
@@ -107,7 +115,15 @@ const Home = () => {
                                     return (
                                         <li>
                                             <div className="projects-row">
-                                                <span> {media.project_title} </span>
+                                                <span>
+                                                    <Link to="/projects" onClick={(e) => {
+                                                        setTimeout(() => {
+                                                            galleryUrlChecker(window.location.href);
+                                                            footerUrlChecker(window.location.href);
+                                                    }, 300)}}>
+                                                        {media.project_title} 
+                                                    </Link>
+                                                </span>
                                             </div>
                                         </li>
                                     )
