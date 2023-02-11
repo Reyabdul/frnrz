@@ -26,11 +26,13 @@ const LoadingScreen = () => {
     const hideLoadingScreen = () => $(".loading-screen").fadeOut(1000);
 
     return (
+
         <>
             <div className="loading-screen">
                 <video id="loading-video" autoPlay={true} muted onEnded={hideLoadingScreen}></video>
             </div>
         </>
+
     )
 }
 

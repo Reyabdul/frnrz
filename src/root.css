@@ -23,13 +23,15 @@
     --body-secondary-color: #000;
 }
 
-body, html {
+body, html, main {
     padding: 0;
     margin: 0;
+    width: 100vw;
     background-color: #300350;
     overflow-x: hidden;
     cursor: url("../src/Assets/media/misc/peacock_logo.png"), default;
     scroll-behavior: smooth;
+    
 
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -39,12 +41,14 @@ body, html {
     scrollbar-width: none;
 }
 
+
 *::-webkit-scrollbar {
     display: none;
 }
 
 .column {
     border: var(--border-thickness);
+    overflow-x: hidden;
 }
 
 a {
@@ -56,8 +60,8 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-text);
     font-weight: normal;
     text-transform: uppercase;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
 }
 
 p, li {

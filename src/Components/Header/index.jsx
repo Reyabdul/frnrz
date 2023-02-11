@@ -48,7 +48,7 @@ const Header = () => {
                             </div>
                         </Link>
                     </div>
-                    <div className="column"></div>
+                    <div className="column empty-box"></div>
                     <div className="column">
                         <div className="contact-info-container">
                             <ul>
@@ -56,7 +56,7 @@ const Header = () => {
                                 <li><a href="https://www.instagram.com/sansfuccs/" target="_blank">@sansfuccs</a></li>
                                 <li>CALGARY | TORONTO</li>
                             </ul>
-                            <img src={contactLogo} />
+                            <img id="contact-logo" src={contactLogo} />
                         </div>
                     </div>
                 </nav>

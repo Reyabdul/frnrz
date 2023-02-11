@@ -27,9 +27,11 @@ a {
 
 .header .column .contact-info-container {
     display: flex;
+    flex: 1 0 100%;
     padding: 0.5rem;
     justify-content: center;
     color: #fff;
+
 }
 
 .header .column .contact-info-container li {
@@ -50,11 +52,7 @@ a {
 
 /*BREAKPOINTS*/
 @media (max-width: 800px) {
-    .header nav {
-        display: flex;
-        height: 13vh;
-        background-color: #300350;
-    }    
+
   }
   
   @media (max-width: 600px) {
@@ -69,7 +67,7 @@ a {
     
 
     .header nav {
-        display: flex;
+        display: block;
         height: 13vh;
         background-color: #300350;
         
@@ -77,12 +75,56 @@ a {
 
     .header .column {
         flex: 1 0 100%;
-        padding: 2rem
+        padding: 2rem;
+        width: 100vw;
     }
 
     .header .column .logo-container img {
-        max-width: 80%;
+        max-width: 100vw;
+        height: auto;
         object-fit: contain;
+    }
+
+
+
+    .header .column .contact-info-container {
+        display: flex;
+        width: 100vw;
+        flex: 1 0 100vw;
+        justify-content: center;
+        color: #fff;
+        position: absolute;
+        left: 0;
+        top: 108rem;
+                
+    }
+
+    .header .column .contact-info-container li {
+        list-style: none;
+        text-transform: uppercase;
+    }
+
+    .header .column .contact-info-container img {
+        max-width: auto;
+        height: 10vh;
+    }
+
+    .header .column .logo-container img {
+        max-width: 100%;
+        height: auto;
+        
+    }
+
+    /*random empty box*/
+    .column.empty-box{
+        /*position: absolute;
+        left: 0;
+        */
+        display: none;
+    }
+
+    .header#contact-logo{
+        
     }
 }
   
