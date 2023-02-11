@@ -4,6 +4,8 @@ import "./index.css";
 
 import sanityClient from "../../client";
 
+import LoadingScreen from "../../Components/LoadingScreen";
+
 import bullHead from "../../Assets/media/static_media/about/bullhead.png";
 import dragon from "../../Assets/media/static_media/about/dragon.png";
 import peacockHead from "../../Assets/media/static_media/about/peacockhead.png";
@@ -28,7 +30,8 @@ const Home = () => {
                 project_media,
                 video_embed,
                 video_file,
-                project_description
+                project_description,
+                project_home_project
               }`
         ).then((data) => {
             setProjectData(data);
@@ -57,6 +60,7 @@ const Home = () => {
 
     return (
         <>
+            <LoadingScreen />
             <main className="page">
                 <div className="home">
                     <div className="column">
@@ -82,10 +86,10 @@ const Home = () => {
                                     </li>
                                 </Link>
                                 {projectData.map((media) => {
+                                    console.log(media);
                                     return (
                                         <li>
                                             <div className="projects-row">
-                                                <span className="video-time">{media.project_media[0].video_time_duration}</span>
                                                 <span> {media.project_title} </span>
                                             </div>
                                         </li>

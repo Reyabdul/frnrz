@@ -33,7 +33,7 @@ const Footer = () => {
                 </div>
                 <div className="column">
                     <div className="copyright-section">
-                         <p>Copyright Sansfuccs | FRNRZ 2023</p>
+                         <p>Copyright Sansfuccs | FRNRZ 2023. Built by <a href="https://www.instagram.com/_hexstudio">hexstudio</a></p>
                     </div>
                 </div>
             </div>

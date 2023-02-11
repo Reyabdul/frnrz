@@ -52,8 +52,8 @@ const Header = () => {
                     <div className="column">
                         <div className="contact-info-container">
                             <ul>
-                                <li>info@frnrz.com</li>
-                                <li>@sansfuccs</li>
+                                <li><a href="mailto:info@frnrz.com">info@frnrz.com</a></li>
+                                <li><a href="https://www.instagram.com/sansfuccs/" target="_blank">@sansfuccs</a></li>
                                 <li>CALGARY | TORONTO</li>
                             </ul>
                             <img src={contactLogo} />

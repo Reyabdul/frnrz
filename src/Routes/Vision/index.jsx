@@ -1,7 +1,61 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { Engine, Render, Bodies, World, Runner } from "matter-js";
 import "./index.css";
 
 const Vision = () => {
+    const scene = useRef();
+    const engine = useRef(Engine.create());
+    const colours = ["#300350", "#94167F", "#E93479", "#F9AC53", "#F62E97", "#153CB4"];
+
+    useEffect(() => {
+        console.log(document.getElementById("canvas-holster").offsetWidth, document.getElementById("canvas-holster").offsetHeight)
+        const cw = document.getElementById("canvas-holster").offsetWidth;
+        const ch = document.getElementById("canvas-holster").offsetHeight;
+
+        const render = Render.create({
+            element: scene.current,
+            engine: engine.current,
+            options: {
+                width: cw,
+                height: ch,
+                wireframes: false,
+                background: 'transparent'
+            }
+        })
+
+        World.add(engine.current.world, [
+            Bodies.rectangle(cw / 2, -10, cw, 20, { isStatic: true }),
+            Bodies.rectangle(-10, ch / 2, 20, ch, { isStatic: true }),
+            Bodies.rectangle(cw / 2, ch + 10, cw, 20, { isStatic: true }),
+            Bodies.rectangle(cw + 10, ch / 2, 20, ch, { isStatic: true })
+        ])
+
+        Runner.run(engine.current)
+        Render.run(render)
+
+        return () => {
+            Render.stop(render)
+            World.clear(engine.current.world)
+            Engine.clear(engine.current)
+            render.canvas.remove()
+            render.canvas = null
+            render.context = null
+            render.textures = {}
+        }
+    }, []);
+
+    const handleAddCircle = e => {
+        const ball = Bodies.circle(e.clientX - 500, e.clientY, 10 + Math.random() * 30, {
+              mass: 10,
+              restitution: 0.9,
+              friction: 0.005,
+              render: {
+                fillStyle: colours[Math.floor(Math.random() * colours.length)]
+              }
+            })
+          World.add(engine.current.world, [ball])
+      }
+
     return (
         <>
             <main className="vision-container">
@@ -34,8 +88,10 @@ const Vision = () => {
                         </article>
                     </section>
                 </div>
-                <div className="column">
-
+                <div id="canvas-holster" className="column">
+                    <div onMouseMove={(e) => handleAddCircle(e)}>
+                        <div ref={scene} style={{"position": "relative"}}/>
+                    </div>
                 </div>
             </main>
         </>

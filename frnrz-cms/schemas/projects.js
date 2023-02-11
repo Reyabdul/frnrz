@@ -50,12 +50,8 @@ export default {
                                 type: "number",
                                 title: "Video width(%)"
                             },
-                            {
-                                name: "video_time_duration",
-                                type: "string",
-                                title: "Video time duration(MM:SS)"
-                            }
-                    ]
+
+                        ]
                     },
                     {
                         name: "image_upload",

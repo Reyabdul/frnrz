@@ -44,6 +44,8 @@
 .project-information-container .column:nth-child(1) {
     padding: 1rem;
     overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .project-information-container .column:nth-child(2) {

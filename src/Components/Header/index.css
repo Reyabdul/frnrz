@@ -13,6 +13,10 @@
   flex: 1;
 }
 
+a {
+    color: #fff;
+}
+
 .header .column .logo-container {
     display: flex;
     height: 100%;
@@ -30,6 +34,7 @@
 
 .header .column .contact-info-container li {
     list-style: none;
+    text-transform: uppercase;
 }
 
 .header .column .contact-info-container img {
