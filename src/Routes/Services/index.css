@@ -89,3 +89,24 @@
     color: #F62E97;
     font-weight: 800;
 }
+
+@media only screen and (min-width: 390px) and (max-width: 690px) {
+    .services-container {
+        padding: 1rem 2rem;
+        height: 100%;
+    }
+
+    .service-accordion-wrapper {
+        position: relative;
+        width: 85vw;
+        margin-bottom: 1rem;
+    }
+
+    .accordion-title {
+        padding: 0em 0.1em;
+    }
+
+    .accordion-title h1 {
+        font-size: 1em;
+    }
+}

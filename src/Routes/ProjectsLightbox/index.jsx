@@ -21,6 +21,8 @@ const Lightbox = (data) => {
         $(".projects-lightbox-container").css({
             "transform": "scale(0)"
         }, 500);
+
+        $("#projects-container").fadeIn(500);
     }
 
     return (

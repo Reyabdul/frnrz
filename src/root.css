@@ -74,10 +74,6 @@ p, li {
     display: flex;
 }
 
-* {
-    box-sizing: border-box;
-  }
-
 .fixed-footer {
     position: fixed;
     bottom: 0;

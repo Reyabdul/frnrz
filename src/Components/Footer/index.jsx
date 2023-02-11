@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import $ from "jquery";
 import "./index.css";
 
@@ -12,6 +12,14 @@ const Footer = () => {
 
         $(".video-reel-title h1").html("VIDEO PLAYING");
     }
+
+    useEffect(() => {
+        if (window.location.href.indexOf("/projects") !== -1) {
+            document.querySelector(".footer").style.marginTop = "100vh";
+        } else {
+            document.querySelector(".footer").style.marginTop = "none";
+        }
+    }, [])
 
     return (
         <>

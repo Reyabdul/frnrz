@@ -1,28 +1,21 @@
 .footer {
     display: flex;
-    height: 13vh;
     z-index: 9;
     background-color: #300350;
     width: 100%;
 }
-
-* {
-    box-sizing: border-box;
-}
   
 .footer .column {
   flex: 1;
-  
 }
 
 .footer .column .video-reel-section {
     display: flex;
-    height: 100%;
 }
 
 .icon-container {
     max-width: 100%;
-    padding: 0 1rem;
+    padding: 1rem 1rem;
     cursor: pointer;
     border-right: 2px solid #000;
 }
@@ -51,73 +44,19 @@
     list-style: none;
 }
 
-/*BREAKPOINTS*/
-@media (max-width: 800px) {
-
-}
-
-@media (max-width: 600px) {
-
-}
-
-@media all and (max-width: 400px) {
-
+@media only screen and (min-width: 390px) and (max-width: 690px) {
     .footer {
-        display: flex;
-        height: 13vh;
-        z-index: 12;
-        background-color: #300350;
-        width: 100vw;
-    }
-    
-    * {
-        box-sizing: border-box;
-    }
-      
-    .footer .column {
-      flex: 1 0 100vw;
-      
-    }
-    
-    .footer .column .video-reel-section {
-        display: flex;
-        height: 12vh;
-        
-    }
-    
-    .icon-container {
-        max-width: 100vw;
-        padding: 0 1rem;
-        cursor: pointer;
-        border-right: 2px solid #000;
-    }
-    
-    .footer .column .video-reel-section .icon-container img {
-        max-width: 5rem;
-        object-fit: contain;
-        
-    }
-    
-    .footer .column .video-reel-section marquee h1 {
-        margin: 0;
-        font-size: 3em;
-    }
-    
-    
-    .footer .column .copyright-section {
-        display: flex;
-        height: 10vh;
-        padding: 2rem 1rem;
-        text-align: center;
-        color: #fff;
-        position: absolute;
-        top: 145rem;
-        left: 0;
-    
-    }
-    
-    .footer .column .copyright-section li {
-        list-style: none;
+        display: grid;
+        position: relative;
+        bottom: 0;
     }
 
+    .footer .column:nth-child(1), .footer .column:nth-child(3) {
+        border-bottom: none;
+    }
+
+    .footer .column .copyright-section {
+        text-align: center;
+        padding: 1rem;
+    }
 }

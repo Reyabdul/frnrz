@@ -31,3 +31,13 @@
 .vision-container canvas {
     display: block;
 }
+
+@media only screen and (min-width: 390px) and (max-width: 690px) {
+    #canvas-holster {
+         display: none;
+    }
+
+    .vision-container .column:nth-child(1) {
+        width: 100vw;
+    }
+}

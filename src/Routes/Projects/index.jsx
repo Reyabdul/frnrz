@@ -51,6 +51,8 @@ const Projects = () => {
             $(".projects-lightbox-container").css({
                 "transform": "scale(0.95)"
             }, 500);
+
+            $("#projects-container").fadeOut(500);
         }
     }
 

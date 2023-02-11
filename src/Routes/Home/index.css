@@ -3,6 +3,10 @@
   height: 100%;
 }
 
+.home .column:nth-child(1) {
+  border-bottom: 0;
+}
+
 .home .column .about-section {
   display: block;
 }
@@ -48,7 +52,7 @@
   font-size: x-large;
 }
 
-.home .column .projects-section .video-time{
+.home .column .projects-section .video-time {
   background-color: #FFFF26;
   color: #000;
   padding: 0 1rem;
@@ -68,6 +72,8 @@
 
 .services-section h1 {
   font-size: 3em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .services-section ul {
@@ -98,155 +104,16 @@
   max-width: 100%;
 }
 
-/*BREAKPOINTS*/
-@media (max-width: 800px) {
-
-}
-
-@media (max-width: 600px) {}
-
-@media all and (max-width:420px) {
-
-
-
-  .page {
-    width: 100vw;
-    height: 70%;
-    display: block;
-    flex: 1 0 100vw;
-  }
-
-  .home {
-    display: block;
-  }
-
-  .home .column {
-    display: block;
-    flex: 1 0 100vw;
-    height: 100%;
-    overflow-x: hidden;
-  }
-
-  .home .column .about-section {
-    display: block;
-    flex: 1 0 100%;
-  }
-
-  .home .column .about-section img {
-    height: auto;
-    width: 100%;
-  }
-
-  .home .column .about-section .about-preview-info h1 {
-    font-size: 1.5em;
-    margin-top: 0;
-    padding: 1.25rem;
-    color: #fff;
-  }
-
-  .home .column .projects-section {
-    display: block;
-    flex: 1 0 100%;
-    position: absolute;
-    left: 0;
-    top: 47rem;
-  }
-
-  .home .column .projects-section ul {
-    width: 100%;
-    padding: 0;
-    text-align: center;
-    list-style: none;
-  }
-
-  .home .column .projects-section h1 {
-    font-size: 3em;
-    margin: 0;
-  }
-
-  .home .column .projects-section ul li {
-    color: #FFFF26;
-    cursor: pointer;
-  }
-
-  .home .column .projects-section span {
-    text-transform: uppercase;
-    font-size: x-large;
-  }
-
-  .home .column .projects-section .video-time {
-    background-color: #FFFF26;
-    color: #000;
-    padding: 0 1rem;
-    border-radius: 20px;
-  }
-
-  .home .column .projects-section div {
-    padding: 1rem 0;
-    border-bottom: 1px solid #000;
+@media only screen and (min-width: 390px) and (max-width: 690px) {
+  .page .home {
+    display: grid;
   }
 
   .services-section {
-    width: 100vw;
-    display: block;
-    padding: 1rem;
-    flex: 1 0 100%;
-    border-top: 1px solid #000;
-    position: absolute;
-    left: 0;
-    top: 67rem;
-    justify-content: center;
-    align-items: center;
+    margin-top: 0;
   }
 
-  .services-section h1 {
-    font-size: 3em;
+  .home .column .about-section .about-preview-info {
+    text-align: center;
   }
-
-  .services-section ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .services-section li {
-    font-size: x-large;
-    cursor: pointer;
-  }
-
-  .vision-section {
-    border-bottom: 1px solid #000;
-    display: block;
-    flex: 1 0 100vw;
-    position: absolute;
-    left: 0;
-    top: 112rem;  
-  }
-
-  .vision-section h1 {
-    margin: 0;
-    width: 100vw;
-    font-size: 6em;
-  }
-
-  .gallery-section video {
-    width: 100%;
-    display: flex;
-    flex: 1 0 100vw;
-    position: absolute;
-    left: 0;
-    top:122rem
-
-  }
-
-  .gallery-section img {
-    height: 100%;
-    width: 100vw;
-    display: flex;
-    flex: 1 0 100%;
-    position: absolute;
-    left: 0;
-    top:10rem
-  }
-
 }

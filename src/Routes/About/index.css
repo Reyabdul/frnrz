@@ -6,6 +6,10 @@
     border: none;
 }
 
+.about-container .column:nth-child(1) {
+    overflow-x: visible !important;
+}
+
 .about-container .column .about-description {
     border: none !important;
     margin: 1rem;
@@ -84,4 +88,27 @@
 
 .clients-container .row .clients ul li img {
     width: 100%;
+}
+
+@media only screen and (min-width: 390px) and (max-width: 690px) {
+    .about-container {
+        display: grid;
+    }
+
+    .about-container .column:nth-child(1) .about-description {
+        width: auto;
+    }
+
+    .about-container .column:nth-child(1) .about-description h1 {
+        margin-top: 0;
+    }
+
+    .about-container .column:nth-child(1) .about-description img {
+        display: none;
+    }
+
+    .clients-container .row .clients ul {
+        display: block;
+        padding: 0;
+    }
 }

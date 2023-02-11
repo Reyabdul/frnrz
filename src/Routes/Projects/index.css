@@ -34,3 +34,27 @@
 .projects-container .projects-carousel .project-cover-image img {
     width: 40vw;
 }
+
+@media only screen and (min-width: 390px) and (max-width: 690px) {
+    .projects-container {
+        align-items: baseline;
+    }
+
+    .projects-container h1 {
+        font-size: 3em;
+    }
+
+    .projects-container .projects-carousel {
+       display: block;
+       left: auto;
+       top: 20vh;
+    }
+
+    .projects-container .projects-carousel .project-cover-image {
+        margin-bottom: 4rem;
+    }
+
+    .projects-container .projects-carousel .project-cover-image img {
+        width: 90vw;
+    }
+}

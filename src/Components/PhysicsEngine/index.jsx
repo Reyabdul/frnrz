@@ -7,6 +7,7 @@ import "jquery-ui-bundle";
 import "./index.css";
 
 const PhysicsEngine = (props) => {
+    let deviceOrientation = "";
     let isStopped = false;
     let domElementFlag = false;
 
@@ -15,6 +16,18 @@ const PhysicsEngine = (props) => {
     }, []);
 
     const init = () => {
+        if (window.innerWidth <= 500) {
+            deviceOrientation = "mobile";
+            console.log(deviceOrientation)
+        } else {
+            deviceOrientation = "desktop";
+            console.log(deviceOrientation)
+            physicsEngine();
+        }
+    }
+
+    const physicsEngine = () => {
+
         const canvas = document.querySelector('canvas');
 
         const width = window.innerWidth;
@@ -96,24 +109,26 @@ const PhysicsEngine = (props) => {
                 domElements[i].style.setProperty("left", `${balls[i].x}px`)
             }
 
-            if (!isStopped) {
+            if (!isStopped && deviceOrientation === "desktop") {
                 requestAnimationFrame(loop);
             }
         }
 
         for (let i = 0; i < domElements.length; i++) {
-            domElements[i].addEventListener("mousedown", (e) => {
-                $(e.target.offsetParent).draggable({
-                    delay: 10,
-                    drag: ((e) => {
-                        e.target.classList.add("stop-animation")
-                        if (e.target.classList.contains("stop-animation")) {
-                            isStopped = true;
-                            cancelAnimationFrame(loop);
-                        }
-                    })
-                });
-            })
+            if (deviceOrientation === "desktop") {
+                domElements[i].addEventListener("mousedown", (e) => {
+                    $(e.target.offsetParent).draggable({
+                        delay: 10,
+                        drag: ((e) => {
+                            e.target.classList.add("stop-animation")
+                            if (e.target.classList.contains("stop-animation")) {
+                                isStopped = true;
+                                cancelAnimationFrame(loop);
+                            }
+                        })
+                    });
+                })
+            }
         }
 
         loop();

@@ -58,14 +58,27 @@ const Home = () => {
         }
     }
 
+    const footerUrlChecker = (url) => {
+        if (window.location.href.indexOf("/projects") !== -1) {
+            document.querySelector(".footer").style.marginTop = "100vh";
+        } else {
+            document.querySelector(".footer").style.marginTop = "none";
+        }
+    }
+
     return (
         <>
-            <LoadingScreen />
+            {/* <LoadingScreen /> */}
             <main className="page">
                 <div className="home">
                     <div className="column">
                         <section className="about-section">
-                            <Link to="/about" onClick={(e) => {setTimeout(() => {galleryUrlChecker(window.location.href)}, 300)}}>
+                            <Link to="/about" onClick={(e) => {
+                                setTimeout(() => {
+                                    galleryUrlChecker(window.location.href);
+                                    footerUrlChecker(window.location.href);
+                                }, 300)}
+                            }>
                                 <img src={imageArray[imageCount]} />
                                 <article className="about-preview-info">
                                     <h1>
@@ -78,7 +91,11 @@ const Home = () => {
                     <div className="column">
                         <section className="projects-section">
                             <ul>
-                                <Link to="/projects" onClick={(e) => {setTimeout(() => {galleryUrlChecker(window.location.href)}, 300)}}>
+                                <Link to="/projects" onClick={(e) => {
+                                    setTimeout(() => {
+                                        galleryUrlChecker(window.location.href);
+                                        footerUrlChecker(window.location.href);
+                                }, 300)}}>
                                     <li>
                                         <div className="project-row">
                                             <h1> Projects </h1>
@@ -102,7 +119,8 @@ const Home = () => {
                                 <li>
                                     <Link to="/services" onClick={(e) => {
                                         setTimeout(() => {
-                                            galleryUrlChecker(window.location.href)
+                                            galleryUrlChecker(window.location.href);
+                                            footerUrlChecker(window.location.href);
                                         }, 300)
                                     }}>
                                         <h1> Services </h1>
@@ -117,7 +135,11 @@ const Home = () => {
                         </section>
                     </div>
                     <div className="column">
-                        <Link to="/vision" onClick={(e) => {setTimeout(() => {galleryUrlChecker(window.location.href)}, 500)}}>
+                        <Link to="/vision" onClick={(e) => {
+                            setTimeout(() => {
+                                galleryUrlChecker(window.location.href);
+                                footerUrlChecker(window.location.href);
+                            }, 300)}}>
                             <section className="vision-section">
                                 <div className="vision-title">
                                     <marquee width="130%" direction="left" vspace="20" scrollamount="25">
@@ -129,7 +151,11 @@ const Home = () => {
                         <section className="gallery-section">
                             <div className="gallery-preview-container">
                                 {/*Using Link rather than 'a tag elements. Refer to App.js to ensure 'Link' corresponds to what is in App.js */}
-                                <Link to="/gallery" onClick={(e) => {setTimeout(() => {galleryUrlChecker(window.location.href)}, 300)}}>
+                                <Link to="/gallery" onClick={(e) => {
+                                    setTimeout(() => {
+                                        galleryUrlChecker(window.location.href);
+                                        footerUrlChecker(window.location.href);
+                                    }, 300)}}>
                                     <video autoPlay muted loop>
                                         <source src={galleryVideo} type="video/mp4" />
                                     </video>
