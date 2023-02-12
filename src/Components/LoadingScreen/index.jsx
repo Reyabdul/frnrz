@@ -5,17 +5,20 @@ import loadingVideo_MOBILE from "../../Assets/media/static_media/loading/MOBILE.
 
 import "./index.css";
 
-const LoadingScreen = () => {
+const LoadingScreen = (props) => {
+    const [doneLoading, setDoneLoading] = useState(false);
 
-    const hideLoadingScreen = () => $(".loading-screen").fadeOut(1000);
+    const hideLoadingScreen = () => {
+        $(".loading-screen").fadeOut(1000);
+    }
 
     return (
 
         <>
             <div className="loading-screen">
-                <video id="loading-video" autoPlay={true} muted loop={true} preload="none" playsInline>
+                <video id="loading-video" autoPlay={true} muted loop={false} preload="none" playsInline onEnded={hideLoadingScreen}>
                     <source src={loadingVideo_MOBILE} type="video/mp4" />    
-                </video> {/*onEnded={hideLoadingScreen}*/}
+                </video>
             </div>
         </>
 

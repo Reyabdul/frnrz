@@ -76,7 +76,7 @@ const Home = () => {
 
     return (
         <>
-            <LoadingScreen />
+            {/* <LoadingScreen /> */}
             <main className="page">
                 <div className="home">
                     <div className="column">
