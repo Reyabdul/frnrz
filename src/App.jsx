@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import $ from "jquery";
 
 //React router Dom
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -7,6 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import VideoReel from "./Components/VideoReel";
+import LoadingScreen from "./Components/LoadingScreen";
 // import Blob from "./Components/Blob";
 import "./root.css";
 
@@ -20,8 +22,31 @@ import Services from "./Routes/Services";
 
 
 const App = () => {
+    const [doneLoading, setDoneLoading] = useState(true);
+
+    const hideLoadingScreen = () => {
+        $(".loading-screen").fadeOut(1000);
+    }
+
+    const loadingRequest = () => {
+        return new Promise(resolve => setTimeout(() => resolve(), 2500));
+    }
+
+    useEffect(() => {
+        loadingRequest().then(() => {
+            const loadingScreen = document.querySelector(".loading-screen");
+
+            if (loadingScreen) {
+                console.log("done loading");
+                hideLoadingScreen();
+                setDoneLoading(!doneLoading);
+            }
+        });
+    });
+
     return (
         <>
+            <LoadingScreen />
             <BrowserRouter>
                 <Header />
                 {/*Routes - path relevant to 'Routes' folder and not the 'Component' folder  */}

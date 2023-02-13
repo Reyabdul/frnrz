@@ -66,7 +66,7 @@ const Home = () => {
         }
     }
 
-    const footerUrlChecker = (url) => {
+    const footerUrlChecker = () => {
         if (window.location.href.indexOf("/projects") !== -1) {
             document.querySelector(".footer").style.marginTop = "100vh";
         } else {
@@ -111,7 +111,6 @@ const Home = () => {
                                     </li>
                                 </Link>
                                 {projectData.map((media) => {
-                                    console.log(media);
                                     return (
                                         <li>
                                             <div className="projects-row">
