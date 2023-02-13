@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import $ from "jquery";
 import "./index.css";
 
 import videoReelIconPlay from "../../Assets/media/misc/video_reel_icon.png";
 
 const Footer = () => {
+    const [footerFlag, setFooterFlag] = useState(true);
+
     const handleVideoButton = (e) => {
         $(".video-reel-container").css({
             "transform": "scale(1)"
@@ -13,13 +15,24 @@ const Footer = () => {
         $(".video-reel-title h1").html("VIDEO PLAYING");
     }
 
+    const footerHandler = () => {
+        return new Promise(resolve => setTimeout(() => resolve(), 500))
+    }
+
     useEffect(() => {
-        if (window.location.href.indexOf("/projects") !== -1) {
-            document.querySelector(".footer").style.marginTop = "100vh";
-        } else {
-            document.querySelector(".footer").style.marginTop = "none";
-        }
-    }, [])
+        footerHandler().then(() => {
+            const footer = document.querySelector(".footer");
+
+            if (footer) {
+                if (window.location.href.indexOf("/projects") !== -1) {
+                    footer.style.marginTop = "100vh";
+                } else {
+                    footer.style.marginTop = "0";
+                }
+                setFooterFlag(!footerFlag);
+            }
+        });
+    })
 
     return (
         <>

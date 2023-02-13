@@ -29,7 +29,6 @@
     font-size: 4em;
 }
 
-
 .footer .column .copyright-section {
     display: flex;
     height: 100%;
@@ -48,7 +47,6 @@
     .footer {
         display: grid;
         position: relative;
-        bottom: 0;
     }
 
     .footer .column:nth-child(1), .footer .column:nth-child(3) {

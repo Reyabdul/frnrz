@@ -66,17 +66,8 @@ const Home = () => {
         }
     }
 
-    const footerUrlChecker = () => {
-        if (window.location.href.indexOf("/projects") !== -1) {
-            document.querySelector(".footer").style.marginTop = "100vh";
-        } else {
-            document.querySelector(".footer").style.marginTop = "none";
-        }
-    }
-
     return (
         <>
-            {/* <LoadingScreen /> */}
             <main className="page">
                 <div className="home">
                     <div className="column">
@@ -84,7 +75,6 @@ const Home = () => {
                             <Link to="/about" onClick={(e) => {
                                 setTimeout(() => {
                                     galleryUrlChecker(window.location.href);
-                                    footerUrlChecker(window.location.href);
                                 }, 300)}
                             }>
                                 <img src={imageArray[imageCount]} />
@@ -102,7 +92,6 @@ const Home = () => {
                                 <Link to="/projects" onClick={(e) => {
                                     setTimeout(() => {
                                         galleryUrlChecker(window.location.href);
-                                        footerUrlChecker(window.location.href);
                                 }, 300)}}>
                                     <li>
                                         <div className="project-row">
@@ -118,7 +107,6 @@ const Home = () => {
                                                     <Link to="/projects" onClick={(e) => {
                                                         setTimeout(() => {
                                                             galleryUrlChecker(window.location.href);
-                                                            footerUrlChecker(window.location.href);
                                                     }, 300)}}>
                                                         {media.project_title} 
                                                     </Link>
@@ -135,7 +123,6 @@ const Home = () => {
                                     <Link to="/services" onClick={(e) => {
                                         setTimeout(() => {
                                             galleryUrlChecker(window.location.href);
-                                            footerUrlChecker(window.location.href);
                                         }, 300)
                                     }}>
                                         <h1> Services </h1>
@@ -153,7 +140,6 @@ const Home = () => {
                         <Link to="/vision" onClick={(e) => {
                             setTimeout(() => {
                                 galleryUrlChecker(window.location.href);
-                                footerUrlChecker(window.location.href);
                             }, 300)}}>
                             <section className="vision-section">
                                 <div className="vision-title">
@@ -169,7 +155,6 @@ const Home = () => {
                                 <Link to="/gallery" onClick={(e) => {
                                     setTimeout(() => {
                                         galleryUrlChecker(window.location.href);
-                                        footerUrlChecker(window.location.href);
                                     }, 300)}}>
                                     <video muted loop>
                                         <source src={galleryVideo} type="video/mp4" />

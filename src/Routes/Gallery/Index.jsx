@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Index.css";
 
+import LoadingScreen from "../../Components/LoadingScreen";
+
 import sanityClient from "../../client";
 
 import image1 from "../../Assets/Images/DSC00373-min.jpg";
@@ -33,28 +35,27 @@ const Gallery = () => {
 
 
     return (
-        <div className="gallery-container grid">
-            <div className="gallery__container grid">
-                
-                
-                {imgGalleryArr.map((img, j) => ({ img, sort: Math.random()  }))
-                .sort((a, b) => a.sort - b.sort)
-                .map(({img}, i) => {
-                    return(
-                        <div className="masonry-item">
-                            <img
-                                key={i}
-                                src={img}
-                                className="masonry-content"
-                            />
-                        </div>
-                    )
-                })
-
-                }
-
+        <>
+            <LoadingScreen />
+            <div className="gallery-container grid">
+                <div className="gallery__container grid">
+                    {imgGalleryArr.map((img, j) => ({ img, sort: Math.random() }))
+                        .sort((a, b) => a.sort - b.sort)
+                        .map(({img}, i) => {
+                            return(
+                                <div className="masonry-item">
+                                    <img
+                                        key={i}
+                                        src={img}
+                                        className="masonry-content"
+                                    />
+                                </div>
+                            )
+                        })
+                    }
+                </div>
             </div>
-        </div>
+        </>
     )
 };
 

@@ -8,7 +8,6 @@ const Vision = () => {
     const colours = ["#300350", "#94167F", "#E93479", "#F9AC53", "#F62E97", "#153CB4"];
 
     useEffect(() => {
-        console.log(document.getElementById("canvas-holster").offsetWidth, document.getElementById("canvas-holster").offsetHeight)
         const cw = document.getElementById("canvas-holster").offsetWidth;
         const ch = document.getElementById("canvas-holster").offsetHeight;
 

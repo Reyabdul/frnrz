@@ -1,5 +1,8 @@
 .projects-container {
+    position: relative;
+    bottom: 0;
     display: flex;
+    height: 100vh;
     min-height: 100vh;
     width: 100vw;
     justify-content: center;
@@ -36,12 +39,13 @@
 }
 
 @media only screen and (min-width: 390px) and (max-width: 690px) {
-    .projects-container {
-        align-items: baseline;
+    .projects-container .projects-carousel {
+        align-items: center;
     }
 
     .projects-container h1 {
         font-size: 3em;
+        margin-top: -75vh;
     }
 
     .projects-container .projects-carousel {
@@ -57,4 +61,4 @@
     .projects-container .projects-carousel .project-cover-image img {
         width: 90vw;
     }
-}
+} 

@@ -37,14 +37,6 @@ const Header = () => {
         }
     }
 
-    const footerUrlChecker = (url) => {
-        if (window.location.href.indexOf("/projects") !== -1) {
-            document.querySelector(".footer").style.marginTop = "100vh";
-        } else {
-            document.querySelector(".footer").style.marginTop = "none";
-        }
-    }
-
     return (
         <>
             <div className="header">
@@ -53,7 +45,6 @@ const Header = () => {
                         <Link exact to="/" onClick={(e) => {
                             setTimeout(() => {
                                 galleryUrlChecker(window.location.href);
-                                footerUrlChecker(window.location.href);
                             }, 300)}}>
                             <div className="logo-container">
                                 <img src={logoArray[logoCount]} alt="home-logo" />

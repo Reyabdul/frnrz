@@ -6,6 +6,26 @@ import loadingVideo_MOBILE from "../../Assets/media/static_media/loading/MOBILE.
 import "./index.css";
 
 const LoadingScreen = (props) => {
+    const [doneLoading, setDoneLoading] = useState(true);
+
+    const hideLoadingScreen = () => {
+        $(".loading-screen").fadeOut(1000);
+    }
+
+    const loadingRequest = () => {
+        return new Promise(resolve => setTimeout(() => resolve(), 2500));
+    }
+
+    useEffect(() => {
+        loadingRequest().then(() => {
+            const loadingScreen = document.querySelector(".loading-screen");
+
+            if (loadingScreen) {
+                hideLoadingScreen();
+                setDoneLoading(!doneLoading);
+            }
+        });
+    });
 
     return (
 

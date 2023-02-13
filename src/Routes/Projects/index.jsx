@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./index.css";
+
+import LoadingScreen from "../../Components/LoadingScreen";
 import ProjectsLightbox from "../ProjectsLightbox"
 
 import sanityClient from "../../client";
@@ -95,6 +97,7 @@ const Projects = () => {
 
     return (
         <>
+            <LoadingScreen />
             <div id="projects-container" className="projects-container">
                 <h1> Projects </h1>
                 <section className="projects-carousel">

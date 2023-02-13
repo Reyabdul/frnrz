@@ -22,28 +22,6 @@ import Services from "./Routes/Services";
 
 
 const App = () => {
-    const [doneLoading, setDoneLoading] = useState(true);
-
-    const hideLoadingScreen = () => {
-        $(".loading-screen").fadeOut(1000);
-    }
-
-    const loadingRequest = () => {
-        return new Promise(resolve => setTimeout(() => resolve(), 2500));
-    }
-
-    useEffect(() => {
-        loadingRequest().then(() => {
-            const loadingScreen = document.querySelector(".loading-screen");
-
-            if (loadingScreen) {
-                console.log("done loading");
-                hideLoadingScreen();
-                setDoneLoading(!doneLoading);
-            }
-        });
-    });
-
     return (
         <>
             <LoadingScreen />
@@ -59,9 +37,9 @@ const App = () => {
                     <Route path="/services" element={<Services />} />
                 </Routes>
                 {/* <Blob /> */}
-                <Footer />
                 <VideoReel />
             </BrowserRouter>
+            <Footer />
         </>
     )
 }
