@@ -171,7 +171,7 @@ const Home = () => {
                                         galleryUrlChecker(window.location.href);
                                         footerUrlChecker(window.location.href);
                                     }, 300)}}>
-                                    <video autoPlay muted loop>
+                                    <video muted loop>
                                         <source src={galleryVideo} type="video/mp4" />
                                     </video>
                                 </Link>
