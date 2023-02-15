@@ -86,4 +86,8 @@
   .home .column .about-section .about-preview-info {
     text-align: center;
   }
+
+  .home .column .navigation-section h1 {
+    font-size: 4em;
+  }
 }
