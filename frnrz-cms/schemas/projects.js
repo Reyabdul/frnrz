@@ -9,6 +9,11 @@ export default {
             title: "Project title",
         },
         {
+            name: "project_subheading",
+            type: "string",
+            title: "Project Sub Heading"
+        },
+        {
             name: "project_cover",
             type: "image",
             title: "Project Cover Image",
@@ -80,6 +85,11 @@ export default {
             type: "array",
             title: "Roles in this project. e.g. Director: Contra or Directed By: Contra",
             of: [{type: "string"}]
+        },
+        {
+            name: "project_link",
+            type: "string",
+            title: "Project Link"
         }
     ]
 }

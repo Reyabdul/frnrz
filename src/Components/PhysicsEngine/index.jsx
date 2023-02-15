@@ -1,17 +1,16 @@
-import React, { useState, useEffect, useRef } from "react";
-import Matter, { Engine, Render, World, Bodies, Body, Common, Events, Collision } from "matter-js";
+import React, { useEffect } from "react";
 
 import $ from "jquery";
 import "jquery-ui-bundle";
 
 import "./index.css";
 
-const PhysicsEngine = (props) => {
+const PhysicsEngine = () => {
     let deviceOrientation = "";
     let isStopped = false;
-    let domElementFlag = false;
 
     useEffect(() => {
+        $(".service-accordion-wrapper").draggable({delay: 0,});
         init();
     }, []);
 
@@ -117,16 +116,16 @@ const PhysicsEngine = (props) => {
         for (let i = 0; i < domElements.length; i++) {
             if (deviceOrientation === "desktop") {
                 domElements[i].addEventListener("mousedown", (e) => {
-                    $(e.target.offsetParent).draggable({
-                        delay: 10,
-                        drag: ((e) => {
-                            e.target.classList.add("stop-animation")
-                            if (e.target.classList.contains("stop-animation")) {
-                                isStopped = true;
-                                cancelAnimationFrame(loop);
-                            }
-                        })
+                    let accordions = document.querySelectorAll(".accordion-item");
+                    accordions.forEach((el) => {
+                       el.classList.remove("collapsed");
                     });
+
+                    e.target.classList.add("stop-animation");
+                    if (e.target.classList.contains("stop-animation")) {
+                        isStopped = true;
+                        cancelAnimationFrame(loop);
+                    }
                 })
             }
         }

@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from "react";
 import $ from "jquery";
+import { Style } from "react-style-tag";
 
 //React router Dom
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import cursor0 from "./Assets/media/misc/cursor0.png";
+import cursor1 from "./Assets/media/misc/cursor1.png";
+import cursor2 from "./Assets/media/misc/cursor2.png";
+import cursor3 from "./Assets/media/misc/cursor3.png";
+import cursor4 from "./Assets/media/misc/cursor4.png";
 
 //Components
 import Header from "./Components/Header";
@@ -22,9 +29,12 @@ import Services from "./Routes/Services";
 
 
 const App = () => {
+    let cursorCounter = 0;
+    const cursors = [cursor0, cursor1, cursor2, cursor3, cursor4];
+
     return (
         <>
-            <LoadingScreen />
+            {/* <LoadingScreen /> */}
             <BrowserRouter>
                 <Header />
                 {/*Routes - path relevant to 'Routes' folder and not the 'Component' folder  */}
@@ -40,6 +50,13 @@ const App = () => {
                 <VideoReel />
             </BrowserRouter>
             <Footer />
+            <Style>
+                {`
+                    body, html {
+                        cursor: url(${cursors[4]}), default;
+                    }
+                `}
+            </Style>
         </>
     )
 }

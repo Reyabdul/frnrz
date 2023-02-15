@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import $ from "jquery";
 import "jquery-ui-bundle";
@@ -11,6 +11,7 @@ import "./index.css";
 const Lightbox = (data) => {
     const lightBoxData = data;
     const projectMedia = [];
+    const projectLink = lightBoxData.data.project_link;
 
     const builder = imageUrlBuilder(sanityClient);
     const urlFor = (source, width) => {
@@ -37,6 +38,7 @@ const Lightbox = (data) => {
                             <>
                                 <div className="column">
                                     <article className="project-title"><h1>{lightBoxData[project].project_title}</h1></article>
+                                    <article className="project-sub-heading"><h3>{lightBoxData[project].project_subheading}</h3></article>
                                     <article className="project-description">
                                         <h2>{lightBoxData[project].project_description}</h2>
                                     </article>
@@ -58,6 +60,11 @@ const Lightbox = (data) => {
                                                 <img className="carousel-media" src={urlFor(media.asset._ref)} />
                                             )
                                         })}
+                                    </section>
+                                    <section className="project-button">
+                                        <div className="project-link-button">
+                                            <button><a href={projectLink} target="_blank"> View Project </a></button>
+                                        </div>
                                     </section>
                                 </div>
                             </>

@@ -2,13 +2,16 @@ import React, { useEffect, useState } from "react";
 import "./index.css";
 
 import LoadingScreen from "../../Components/LoadingScreen";
-import ProjectsLightbox from "../ProjectsLightbox"
+import ProjectsLightbox from "../ProjectsLightbox";
+import Stars from "../../Components/Stars";
 
 import sanityClient from "../../client";
 import imageUrlBuilder from "@sanity/image-url";
 
 import $ from "jquery";
 import "jquery-ui-bundle";
+
+import starBackground from "../../Assets/media/static_media/project/stars.png";
 
 const Projects = () => {
     const [projectData, setProjectData] = useState([]);
@@ -46,6 +49,11 @@ const Projects = () => {
             cursor: "crosshair",
             scrollSpeed: 1
         });
+
+        if (window.location.href.indexOf("/projects") !== -1) {
+            document.getElementsByTagName("body")[0].classList.add("space-gradient");
+            $("#star-background").fadeIn(500);
+        }
     }, []);
 
     const handleLightbox = (e) => {
@@ -64,6 +72,7 @@ const Projects = () => {
         sanityClient.fetch(
             `*[_type == "projects"]{
                 project_title,
+                project_subheading,
                 project_media,
                 project_year,
                 video_embed,
@@ -71,7 +80,8 @@ const Projects = () => {
                 project_description,
                 project_year,
                 project_roles,
-                project_cover
+                project_cover,
+                project_link
               }`
         ).then((data) => {
             data.forEach((project) => {
@@ -111,9 +121,10 @@ const Projects = () => {
                             </div>
                         )
                     })}
-                </section>  
+                </section> 
             </div>
             <ProjectsLightbox data={projectLightboxData} />
+            <Stars />
         </>
     )
 }

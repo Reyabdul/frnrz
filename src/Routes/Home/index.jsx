@@ -14,29 +14,6 @@ import galleryVideo from "../../Assets/media/static_media/gallery/video-reel.mp4
 const Home = () => {
     const [imageCount, setImageCount] = useState(0);
     const imageArray = [bullHead, dragon, peacockHead];
-    const [projectData, setProjectData] = useState([]);
-
-    const editUrlString = (urlString) => {
-        let strUrl = urlString.replace(/file-/g, "");
-        strUrl = strUrl.replace("-", ".");
-
-        return `https://cdn.sanity.io/files/ufskghtn/production/${strUrl}`;
-    }
-
-    useEffect(() => {
-        sanityClient.fetch(
-            `*[_type == "projects"]{
-                project_title,
-                project_media,
-                video_embed,
-                video_file,
-                project_description,
-                project_home_project
-              }`
-        ).then((data) => {
-            setProjectData(data);
-        }).catch(console.error);
-    }, []);
 
     useEffect(() => {
         const imageInterval = setInterval(() => {
@@ -87,53 +64,24 @@ const Home = () => {
                         </section>
                     </div>
                     <div className="column">
-                        <section className="projects-section">
+                        <section className="navigation-section">
                             <ul>
-                                <Link to="/projects" onClick={(e) => {
-                                    setTimeout(() => {
-                                        galleryUrlChecker(window.location.href);
-                                }, 300)}}>
-                                    <li>
-                                        <div className="project-row">
-                                            <h1> Projects </h1>
-                                        </div>
-                                    </li>
+                                <Link to="/projects" onClick={(e) => {setTimeout(() => {galleryUrlChecker(window.location.href);}, 300)}}>
+                                    <li><h1> Projects </h1></li>
                                 </Link>
-                                {projectData.map((media) => {
-                                    return (
-                                        <li>
-                                            <div className="projects-row">
-                                                <span>
-                                                    <Link to="/projects" onClick={(e) => {
-                                                        setTimeout(() => {
-                                                            galleryUrlChecker(window.location.href);
-                                                    }, 300)}}>
-                                                        {media.project_title} 
-                                                    </Link>
-                                                </span>
-                                            </div>
-                                        </li>
-                                    )
-                                })}
+                                <Link to="/services" onClick={(e) => {setTimeout(() => {galleryUrlChecker(window.location.href);}, 300)}}>
+                                    <li><h1> Services </h1></li>
+                                </Link>
+                                <Link to="/gallery" onClick={(e) => {setTimeout(() => {galleryUrlChecker(window.location.href);}, 300)}}>
+                                    <li><h1> Gallery </h1></li>
+                                </Link>
+                                <Link to="/vision" onClick={(e) => {setTimeout(() => {galleryUrlChecker(window.location.href);}, 300)}}>
+                                    <li><h1> Mission </h1></li>
+                                </Link>
+                                <Link to="/about" onClick={(e) => {setTimeout(() => {galleryUrlChecker(window.location.href);}, 300)}}>
+                                    <li><h1> About </h1></li>
+                                </Link>
                             </ul>
-                        </section>
-                        <section className="services-section">
-                            <ul>
-                                <li>
-                                    <Link to="/services" onClick={(e) => {
-                                        setTimeout(() => {
-                                            galleryUrlChecker(window.location.href);
-                                        }, 300)
-                                    }}>
-                                        <h1> Services </h1>
-                                    </Link>
-                                </li>
-                                <li> - Visual & Film Production </li>
-                                <li> - Event Production </li>
-                                <li> - Art Production & Artist Management </li>
-                                <li> - Creative Services </li>
-                            </ul>
-                            <div className="service-preview"></div>
                         </section>
                     </div>
                     <div className="column">
@@ -143,7 +91,7 @@ const Home = () => {
                             }, 300)}}>
                             <section className="vision-section">
                                 <div className="vision-title">
-                                    <marquee width="130%" direction="left" vspace="20" scrollamount="25">
+                                    <marquee width="130%" direction="left" vspace="1" scrollamount="10">
                                         <h1> 2023 VISION : WE ARE ALL FOREIGNERZ. ONLY ART FROM THE GLOBAL UNDERGROUND WILL MOVE US FORWARD. </h1>
                                     </marquee> 
                                 </div>

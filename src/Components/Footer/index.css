@@ -1,7 +1,7 @@
 .footer {
     display: flex;
     z-index: 9;
-    background-color: #300350;
+    background-color: transparent;
     width: 100%;
 }
   
@@ -17,7 +17,7 @@
     max-width: 100%;
     padding: 1rem 1rem;
     cursor: pointer;
-    border-right: 2px solid #000;
+    /* border-right: 2px solid #000; */
 }
 
 .footer .column .video-reel-section .icon-container img {

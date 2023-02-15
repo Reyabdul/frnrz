@@ -1,7 +1,9 @@
+.header {
+    background: transparent;
+}
 
 .header nav {
     display: flex;
-    background-color: #300350;
 }
 
 * {

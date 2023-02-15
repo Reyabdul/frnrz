@@ -29,7 +29,10 @@
 .clients-container .row .clients h1 {
     color: #fff;
     font-size: xxx-large;
+    margin-top: 0;
     margin-bottom: 0;
+    padding: 0;
+    text-transform: uppercase;
 }
 
 .about-container .column .about-description h3 {
@@ -46,9 +49,8 @@
     max-width: 40%;
 }
 
-.about-container .column:nth-child(2) .about-description h3 {
-    font-family: var(--heading-text);
-    font-size: x-large;
+.about-container .column .about-description h3 {
+    font-family: var(--body-text);
 }
 
 .about-container .column:nth-child(1) .about-description {

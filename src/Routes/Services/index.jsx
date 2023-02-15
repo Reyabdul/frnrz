@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./index.css";
 
 import PhysicsEngine from "../../Components/PhysicsEngine";
@@ -39,7 +39,6 @@ const Services = () => {
                             <li>
                                 <article>
                                     <h1> Development & Design </h1>
-                                    <p> Great projects start with great foundations. We are here to help turn your idea into a reality right from the beginning.</p>
                                     <ul>
                                         <li> Concept Creation and Development </li>
                                         <li> Project Design </li>
@@ -51,7 +50,6 @@ const Services = () => {
                             <li>
                                 <article>
                                     <h1> Pre-production </h1>
-                                    <p>From planning to execution, our team will make sure all the logistics of your project are handled with meticulous detail and care.</p>
                                     <ul>
                                         <li> Storyboarding </li>
                                         <li> Production Scheduling </li>
@@ -64,7 +62,6 @@ const Services = () => {
                             <li>
                                 <article>
                                     <h1> Production </h1>
-                                    <p>This is where the rubber hits the road and our mandate is to ensure that the entire production runs smoothly.</p>
                                     <ul>
                                         <li> Directing </li>
                                         <li> Video Production </li>
@@ -77,7 +74,6 @@ const Services = () => {
                             <li>
                                 <article>
                                     <h1> Post-Production </h1>
-                                    <p>As a full service production house, we will take everything and bring your project to life.</p>
                                     <ul>
                                         <li> Editing </li>
                                         <li> Visual effects </li>
@@ -102,7 +98,6 @@ const Services = () => {
                 </article>
                 <article className="service-accordion-wrapper">
                     <Accordian title="Creative Services">
-                        <p>As storytellers, we want to tell the whole story of your brand - the work you do, the people who work there, and the community you built.  Creative services we offer include:</p>
                         <ul>
                             <li> Illustration Services </li>
                             <li> Brand Strategy </li>

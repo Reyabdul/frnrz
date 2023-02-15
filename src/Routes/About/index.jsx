@@ -44,15 +44,15 @@ const About = () => {
                 </div>
                 <div className="column">
                     <article className="about-description">
-                        <h3> Creative Vision & Process</h3>
-                        <p>
+                        <h1> Creative Vision & Process</h1>
+                        <h3>
                             <span className="starter-text">FOREIGNERZ</span> is made up of a diverse group of multidisciplinary creatives who bring technical and artistic expertise to each project. 
                             All FOREIGNERZ projects involve in-house creative direction, production, cinematography, editing and sound curation. We strongly believe in powerful storytelling paired with an aesthetic sensibility that is global, ambitious and larger than life. 
                             As creatives, we are informed by a multitude of histories, ideas, cultural references and experiences which can be seen in our work. 
                             We look at Alberta, and Canada as an ecosystem which requires a level of creative disruption. Our work in various artistic spaces plays with the idea of imagining big, leaning into the surreal, capturing the illusory and presenting something profound.
 
                             In 2018, in the heart of the prairies ‘SANSFUCCS’ was born - a collective of artists moving together to create noise in the Alberta underground through music, through basement shows, with film, fashion, visual art and storytelling in every medium. SANSFUCCS was a pressure valve to the arts and culture landscape of Calgary and created small but potent spaces. opportunities for BIPOC artists to begin to develop their passion, push their artistic philosophy and strive to center a new vision for the arts overall. The spirit of SANSFUCCS - to create bold, uncompromising art and challenge the spaces a new generation of artists find themselves in to permanently shift sits at the very heart of FOREIGNERZ.
-                        </p>
+                        </h3>
                     </article>
                 </div>
             </div>

@@ -24,7 +24,7 @@ const Footer = () => {
             const footer = document.querySelector(".footer");
 
             if (footer) {
-                if (window.location.href.indexOf("/projects") !== -1) {
+                if (window.location.href.indexOf("/projects") !== -1 && window.innerWidth < 500) {
                     footer.style.marginTop = "100vh";
                 } else {
                     footer.style.marginTop = "0";
@@ -43,7 +43,7 @@ const Footer = () => {
                             <img src={videoReelIconPlay} onClick={(e) => handleVideoButton(e)}/>
                         </div>
                         <div className="video-reel-title">
-                            <marquee width="100%" direction="left" vspace="20" scrollamount="20">
+                            <marquee width="100%" direction="left" vspace="20" scrollamount="10">
                                 <h1> VIDEO REEL TITLE </h1>
                             </marquee> 
                         </div>
@@ -54,7 +54,7 @@ const Footer = () => {
                 </div>
                 <div className="column">
                     <div className="copyright-section">
-                         <p>Copyright Sansfuccs | FRNRZ 2023. Built by <a href="https://www.instagram.com/_hexstudio">hexstudio</a></p>
+                         <p>Copyright FOREIGNERZ. Built by <a href="https://www.instagram.com/_hexstudio">hexstudio</a></p>
                     </div>
                 </div>
             </div>
