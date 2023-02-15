@@ -5,7 +5,7 @@ import { randFloatSpread } from "three/src/math/MathUtils";
 import "./index.css";
 
 const Stars = () => {
-    const starCount = 2000;
+    const starCount = 5000;
     let star, starArray = [];
     let starGeo = new THREE.OctahedronGeometry(1, 0);
     let starMaterial = new THREE.MeshBasicMaterial({color: 0xffffff, wireframe: true, opacity: 1, transparent: false});
