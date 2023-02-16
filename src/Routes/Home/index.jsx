@@ -43,6 +43,7 @@ const Home = () => {
 
     return (
         <>
+            <div className="noise-overlay" />
             <main className="page">
                 <VisionTicker />
                 <div className="home">

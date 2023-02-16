@@ -42,12 +42,27 @@ body, html {
     background: -moz-linear-gradient(167deg, rgba(174,60,209,1) 0%, rgba(71,47,203,1) 71%);
     background: -webkit-linear-gradient(167deg, rgba(174,60,209,1) 0%, rgba(71,47,203,1) 71%);
     background: linear-gradient(167deg, rgba(174,60,209,1) 0%, rgba(71,47,203,1) 71%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ae3cd1",endColorstr="#472fcb",GradientType=1); 
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ae3cd1",endColorstr="#472fcb",GradientType=1);
+}
+
+.noise-overlay {
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(https://grainy-gradients.vercel.app/noise.svg);
+    filter: contrast(1000%) brightness(5%);
 }
 
 
 *::-webkit-scrollbar {
     display: none;
+}
+
+.page {
+    position: relative;
 }
 
 .column {
