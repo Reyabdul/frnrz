@@ -13,7 +13,7 @@ const LoadingScreen = (props) => {
     }
 
     const loadingRequest = () => {
-        return new Promise(resolve => setTimeout(() => resolve(), 2500));
+        return new Promise(resolve => setTimeout(() => resolve(), 3000));
     }
 
     useEffect(() => {
