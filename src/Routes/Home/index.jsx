@@ -2,14 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./index.css";
 
-import sanityClient from "../../client";
-
-import LoadingScreen from "../../Components/LoadingScreen";
+import VisionTicker from "../../Components/VisionTicker";
 
 import bullHead from "../../Assets/media/static_media/about/bullhead.png";
 import dragon from "../../Assets/media/static_media/about/dragon.png";
 import peacockHead from "../../Assets/media/static_media/about/peacockhead.png";
-import galleryVideo from "../../Assets/media/static_media/gallery/video-reel.mp4";
+import galleryVideo from "../../Assets/media/static_media/gallery/video_reel_tall.mp4";
 
 const Home = () => {
     const [imageCount, setImageCount] = useState(0);
@@ -46,6 +44,7 @@ const Home = () => {
     return (
         <>
             <main className="page">
+                <VisionTicker />
                 <div className="home">
                     <div className="column">
                         <section className="about-section">
@@ -76,7 +75,7 @@ const Home = () => {
                                     <li><h1> Gallery </h1></li>
                                 </Link>
                                 <Link to="/vision" onClick={(e) => {setTimeout(() => {galleryUrlChecker(window.location.href);}, 300)}}>
-                                    <li><h1> Mission </h1></li>
+                                    <li><h1> Vision </h1></li>
                                 </Link>
                                 <Link to="/about" onClick={(e) => {setTimeout(() => {galleryUrlChecker(window.location.href);}, 300)}}>
                                     <li><h1> About </h1></li>
@@ -85,18 +84,6 @@ const Home = () => {
                         </section>
                     </div>
                     <div className="column">
-                        <Link to="/vision" onClick={(e) => {
-                            setTimeout(() => {
-                                galleryUrlChecker(window.location.href);
-                            }, 300)}}>
-                            <section className="vision-section">
-                                <div className="vision-title">
-                                    <marquee width="130%" direction="left" vspace="1" scrollamount="10">
-                                        <h1> 2023 VISION : WE ARE ALL FOREIGNERZ. ONLY ART FROM THE GLOBAL UNDERGROUND WILL MOVE US FORWARD. </h1>
-                                    </marquee> 
-                                </div>
-                            </section>
-                        </Link>
                         <section className="gallery-section">
                             <div className="gallery-preview-container">
                                 {/*Using Link rather than 'a tag elements. Refer to App.js to ensure 'Link' corresponds to what is in App.js */}

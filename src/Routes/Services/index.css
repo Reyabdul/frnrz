@@ -91,6 +91,10 @@
     font-weight: 800;
 }
 
+.accordion-drag-flag {
+    cursor: url("../../Assets/media/misc/drag_icon_pink.png "), default;
+}
+
 @media only screen and (min-width: 390px) and (max-width: 690px) {
     .services-container {
         padding: 1rem 2rem;

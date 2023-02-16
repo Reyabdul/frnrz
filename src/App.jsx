@@ -34,10 +34,9 @@ const App = () => {
 
     return (
         <>
-            {/* <LoadingScreen /> */}
+            <LoadingScreen />
             <BrowserRouter>
                 <Header />
-                {/*Routes - path relevant to 'Routes' folder and not the 'Component' folder  */}
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
@@ -46,7 +45,6 @@ const App = () => {
                     <Route path="/vision" element={<Vision />} />
                     <Route path="/services" element={<Services />} />
                 </Routes>
-                {/* <Blob /> */}
                 <VideoReel />
             </BrowserRouter>
             <Footer />

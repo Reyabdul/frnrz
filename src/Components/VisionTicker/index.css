@@ -1,0 +1,9 @@
+.vision-section h1 {
+    font-size: 6em;
+    font-family: var(--body-text);
+    background-color: #EA2DCC;
+    padding: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 0;
+}

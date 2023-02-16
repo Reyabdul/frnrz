@@ -116,9 +116,15 @@ const PhysicsEngine = () => {
         for (let i = 0; i < domElements.length; i++) {
             if (deviceOrientation === "desktop") {
                 domElements[i].addEventListener("mousedown", (e) => {
-                    let accordions = document.querySelectorAll(".accordion-item");
-                    accordions.forEach((el) => {
+                    let accordionItems = document.querySelectorAll(".accordion-item");
+                    let accordionTitles = document.querySelectorAll(".accordion-title");
+                    accordionItems.forEach((el) => {
                        el.classList.remove("collapsed");
+                       el.parentElement.classList.add("accordion-drag-flag");
+                    });
+
+                    accordionTitles.forEach((el) => {
+                        el.classList.add("accordion-drag-flag");
                     });
 
                     e.target.classList.add("stop-animation");
