@@ -108,6 +108,7 @@ const Projects = () => {
     return (
         <>
             <LoadingScreen />
+            <div className="noise-overlay" />
             <div id="projects-container" className="projects-container">
                 <h1> Projects </h1>
                 <section className="projects-carousel">

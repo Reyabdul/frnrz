@@ -44,7 +44,7 @@ const Footer = () => {
                         </div>
                         <div className="video-reel-title">
                             <marquee width="100%" direction="left" vspace="20" scrollamount="10">
-                                <h1> VIDEO REEL TITLE </h1>
+                                <h1> 2023 SIZZLE REEL </h1>
                             </marquee> 
                         </div>
                     </div>
