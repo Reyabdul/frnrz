@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import $ from "jquery";
 
 import loadingVideo_MOBILE from "../../Assets/media/static_media/loading/MOBILE.mp4";
 
 import "./index.css";
 
-const LoadingScreen = (props) => {
+const LoadingScreen = () => {
     const [doneLoading, setDoneLoading] = useState(true);
 
     const hideLoadingScreen = () => {
@@ -16,7 +16,7 @@ const LoadingScreen = (props) => {
         return new Promise(resolve => setTimeout(() => resolve(), 3000));
     }
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         loadingRequest().then(() => {
             const loadingScreen = document.querySelector(".loading-screen");
 
