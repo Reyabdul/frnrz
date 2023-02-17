@@ -28,7 +28,6 @@ const LoadingScreen = () => {
     });
 
     return (
-
         <>
             <div className="loading-screen">
                 <video id="loading-video" autoPlay={true} muted loop={false} preload="none" playsInline>
