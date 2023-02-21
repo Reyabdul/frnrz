@@ -89,7 +89,16 @@ p, li {
 }
 
 .page .home {
+    position: relative;
+    z-index: 3;
     display: flex;
+}
+
+#canvas-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
 
 .fixed-footer {
@@ -97,6 +106,7 @@ p, li {
     bottom: 0;
     left: 0;
     width: 100vw;
+    z-index: 3;
 }
 
 .fixed-header {
@@ -104,4 +114,5 @@ p, li {
     top: 0;
     left: 0;
     width: 100vw;
+    z-index: 3;
 }

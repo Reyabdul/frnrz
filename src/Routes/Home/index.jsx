@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./index.css";
 
 import VisionTicker from "../../Components/VisionTicker";
+import Stars from "../../Components/Stars";
 
 import bullHead from "../../Assets/media/static_media/about/bullhead.png";
 import dragon from "../../Assets/media/static_media/about/dragon.png";
@@ -101,6 +102,7 @@ const Home = () => {
                     </div>
                 </div>
             </main>
+            <Stars />
         </>
     )
 }
