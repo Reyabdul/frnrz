@@ -61,7 +61,7 @@ const Lightbox = (data) => {
                                                 return (
                                                     <iframe className="carousel-media" src={media.video_embed} frameBorder="0" allowFullScreen={true} />
                                                 )
-                                            } else if (media._type === "video_upload") {
+                                            } else if (media._type === "image_upload") {
                                                 projectMedia.push(urlFor(media.asset._ref));
 
                                                 return (
