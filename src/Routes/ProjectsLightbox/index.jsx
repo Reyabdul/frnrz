@@ -55,10 +55,19 @@ const Lightbox = (data) => {
                                 <div className="column">
                                     <section className="project-media-carousel">
                                         {Object.keys(lightBoxData.data).length > 0 && lightBoxData[project].project_media.map((media) => {
-                                            projectMedia.push(urlFor(media.asset._ref));
-                                            return (
-                                                <img className="carousel-media" src={urlFor(media.asset._ref)} />
-                                            )
+                                            console.log(media);
+                                            
+                                            if (media._type === "video_embed") {
+                                                return (
+                                                    <iframe className="carousel-media" src={media.video_embed} frameBorder="0" allowFullScreen={true} />
+                                                )
+                                            } else if (media._type === "video_upload") {
+                                                projectMedia.push(urlFor(media.asset._ref));
+
+                                                return (
+                                                    <img className="carousel-media" src={urlFor(media.asset._ref)} />
+                                                )
+                                            }
                                         })}
                                     </section>
                                     <section className="project-button">
