@@ -8,8 +8,8 @@ import "./index.css";
 const LoadingScreen = () => {
     const [doneLoading, setDoneLoading] = useState(true);
 
-    const hideLoadingScreen = () => {
-        $(".loading-screen").fadeOut(1000);
+    const hideLoadingScreen = (duration) => {
+        $(".loading-screen").fadeOut(duration);
     }
 
     const loadingRequest = () => {
@@ -17,14 +17,18 @@ const LoadingScreen = () => {
     }
 
     useLayoutEffect(() => {
-        loadingRequest().then(() => {
-            const loadingScreen = document.querySelector(".loading-screen");
+        const loadingScreen = document.querySelector(".loading-screen");
 
-            if (loadingScreen) {
-                hideLoadingScreen();
-                setDoneLoading(!doneLoading);
-            }
-        });
+        if (window.location.href.indexOf("/projects") !== -1) {
+            hideLoadingScreen(0);
+        } else {
+            loadingRequest().then(() => {
+                if (loadingScreen) {
+                    hideLoadingScreen(1000);
+                    setDoneLoading(!doneLoading);
+                }
+            });
+        }
     });
 
     return (

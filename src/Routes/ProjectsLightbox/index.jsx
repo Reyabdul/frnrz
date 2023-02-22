@@ -44,7 +44,9 @@ const Lightbox = (data) => {
                                     </article>
                                     <article className="project-roles">
                                         <ul>
-                                            {Object.keys(lightBoxData.data).length > 0 && lightBoxData.data.project_roles.map((role) => {
+                                            {Object.keys(lightBoxData.data).length > 0 && 
+                                            lightBoxData.data.project_roles != null &&  
+                                            lightBoxData.data.project_roles.map((role) => {
                                                 return (
                                                     <li>{role}</li>
                                                 )
@@ -54,7 +56,9 @@ const Lightbox = (data) => {
                                 </div>
                                 <div className="column">
                                     <section className="project-media-carousel">
-                                        {Object.keys(lightBoxData.data).length > 0 && lightBoxData[project].project_media.map((media) => {
+                                        {Object.keys(lightBoxData.data).length > 0 && 
+                                        lightBoxData[project].project_media != null && 
+                                        lightBoxData[project].project_media.map((media) => {
                                             console.log(media);
                                             
                                             if (media._type === "video_embed") {

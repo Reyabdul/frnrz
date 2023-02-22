@@ -95,7 +95,7 @@
 }
 
 .project-information-container .column .project-description h2 {
-    font-size: 1.4em;
+    font-size: 1em;
     font-family: var(--body-text);
     color: #fff;
 }
