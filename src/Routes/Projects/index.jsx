@@ -113,14 +113,16 @@ const Projects = () => {
                 <h1> Projects </h1>
                 <section className="projects-carousel">
                     {projectData.map((project) => {
-                        return (
-                            <div className="project-cover-image" onClick={(e) => {
-                                getProjectData(e);
-                                handleScrollAnimation();
-                            }}>
-                                <img className="project-thumbnail" src={urlFor(project.project_cover.asset._ref)} />
-                            </div>
-                        )
+                        if (project.project_cover != null) {
+                            return (
+                                <div className="project-cover-image" onClick={(e) => {
+                                    getProjectData(e);
+                                    handleScrollAnimation();
+                                }}>
+                                    <img className="project-thumbnail" src={urlFor(project.project_cover.asset._ref)} />
+                                </div>
+                            )
+                        }
                     })}
                 </section> 
             </div>
