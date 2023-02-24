@@ -93,7 +93,7 @@ const Home = () => {
                                     setTimeout(() => {
                                         galleryUrlChecker(window.location.href);
                                     }, 300)}}>
-                                    <video muted loop>
+                                    <video muted loop autoPlay={true} playsInline={true}>
                                         <source src={galleryVideo} type="video/mp4" />
                                     </video>
                                 </Link>
