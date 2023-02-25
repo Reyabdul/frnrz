@@ -2,6 +2,15 @@
     display: flex;
 }
 
+.about-gradient-variant {
+    background-repeat: no-repeat;
+    background: rgb(174,60,209);
+    background: -moz-linear-gradient(167deg, rgba(71, 47, 203, 1) 0%, rgba(174,60,209,1) 71%);
+    background: -webkit-linear-gradient(167deg, rgba(71, 47, 203, 1) 0%, rgba(174,60,209,1) 71%);
+    background: linear-gradient(167deg, rgba(71, 47, 203, 1) 0%, rgba(174,60,209,1) 71%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#472fcb",endColorstr="#ae3cd1",GradientType=1);
+}
+
 .about-container .column {
     border: none;
 }
@@ -17,7 +26,6 @@
 }
 
 .about-container .column .about-description {
-    background-color: rgba(249, 172, 83, 0.5);
     border-radius: 20px;
 }
 

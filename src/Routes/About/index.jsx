@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import $ from "jquery";
+
 import "./index.css";
 
 import yellowPinkLogo from "../../Assets/media/logos/yellowpink_logo.PNG";
@@ -23,6 +25,13 @@ import img17 from "../../Assets/media/static_media/about/clients/17.png";
 import img18 from "../../Assets/media/static_media/about/clients/18.png";
 
 const About = () => {
+    useEffect(() => {
+        if (window.location.href.indexOf("/about") !== -1) {
+            document.getElementsByTagName("body")[0].classList.add("about-gradient-variant");
+            $("#star-background").fadeIn(500);
+        }
+    }, []);
+
     return (
         <>
             <div className="about-container">

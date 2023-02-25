@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import $ from "jquery";
 import { Link } from "react-router-dom";
 import "./index.css";
 
@@ -15,6 +16,12 @@ const Home = () => {
     const imageArray = [bullHead, dragon, peacockHead];
 
     useEffect(() => {
+        if (window.location.href.indexOf("/") !== -1) {
+            document.getElementsByTagName("body")[0].classList.remove("about-gradient-variant");
+            document.getElementsByTagName("body")[0].classList.remove("space-gradient");
+            $("#star-background").fadeIn(500);
+        }
+
         const imageInterval = setInterval(() => {
             setImageCount((imageCount) => imageCount >= 2 ? imageCount - imageCount : imageCount + 1);
         }, 3000);
