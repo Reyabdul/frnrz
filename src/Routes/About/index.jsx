@@ -7,10 +7,7 @@ import yellowPinkLogo from "../../Assets/media/logos/yellowpink_logo.PNG";
 
 import img1 from "../../Assets/media/static_media/about/clients/1.svg";
 import img2 from "../../Assets/media/static_media/about/clients/2.svg";
-import img3 from "../../Assets/media/static_media/about/clients/3.svg";
-import img4 from "../../Assets/media/static_media/about/clients/4.svg";
 import img5 from "../../Assets/media/static_media/about/clients/5.svg";
-import img6 from "../../Assets/media/static_media/about/clients/6.svg";
 import img7 from "../../Assets/media/static_media/about/clients/7.svg";
 import img8 from "../../Assets/media/static_media/about/clients/8.svg";
 import img9 from "../../Assets/media/static_media/about/clients/9.svg";
@@ -24,7 +21,13 @@ import img16 from "../../Assets/media/static_media/about/clients/16.svg";
 import img18 from "../../Assets/media/static_media/about/clients/18.svg";
 import img19 from "../../Assets/media/static_media/about/clients/19.svg";
 import img20 from "../../Assets/media/static_media/about/clients/20.svg";
-import img21 from "../../Assets/media/static_media/about/clients/21.svg";
+
+import imgVariant1 from "../../Assets/media/static_media//about/clients/1.png";
+import imgVariant2 from "../../Assets/media/static_media/about/clients/2.png";
+import imgVariant3 from "../../Assets/media/static_media/about/clients/3.png";
+import imgVariant4 from "../../Assets/media/static_media/about/clients/4.png";
+import imgVariant5 from "../../Assets/media/static_media/about/clients/5.png";
+import imgVariant6 from "../../Assets/media/static_media/about/clients/6.png";
 
 const About = () => {
     useEffect(() => {
@@ -74,12 +77,12 @@ const About = () => {
                         <ul>
                             <li><img src={img1}/></li>
                             <li><img src={img2}/></li>
-                            <li><img src={img3}/></li>
-                            <li><img src={img4}/></li>
+                            <li><img src={imgVariant1}/></li>
+                            <li><img src={imgVariant2}/></li>
                             <li><img src={img5}/></li>
-                            <li><img src={img6}/></li>
                             <li><img src={img7}/></li>
                             <li><img src={img8}/></li>
+                            <li><img src={imgVariant3}/></li>
                             <li><img src={img9}/></li>
                             <li><img src={img10}/></li>
                             <li><img src={img11}/></li>
@@ -87,13 +90,15 @@ const About = () => {
                         <ul>
                             <li><img src={img12}/></li>
                             <li><img src={img13}/></li>
+                            <li><img src={imgVariant4}/></li>
                             <li><img src={img14}/></li>
                             <li><img src={img15}/></li>
                             <li><img src={img16}/></li>
+                            <li><img src={imgVariant5}/></li>
                             <li><img src={img18}/></li>
                             <li><img src={img19}/></li>
                             <li><img src={img20}/></li>
-                            <li><img src={img21}/></li>
+                            <li><img src={imgVariant6}/></li>
                         </ul>
                     </section>
                 </div>

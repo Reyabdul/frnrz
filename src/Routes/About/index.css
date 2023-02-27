@@ -76,7 +76,7 @@
 }
 
 .clients-container {
-    padding: 2rem;
+    width: 100%;
 }
 
 .clients-container .row {
@@ -89,11 +89,15 @@
 }
 
 .clients-container .row .clients ul {
-    display: flex;
+    width: 100%;
+    display: grid;
+    grid-template-columns:  repeat(6, 6fr);
     list-style: none;
     justify-content: center;
     align-items: center;
     margin: 0;
+    padding: 0;
+    gap: 1rem;
 }
 
 .clients-container .row .clients li {
@@ -101,7 +105,7 @@
 }
 
 .clients-container .row .clients ul li img {
-    max-width: 7vw;
+    max-width: 100%;
     object-fit: contain;
     object-position: center;
 }
@@ -124,7 +128,14 @@
     }
 
     .clients-container .row .clients ul {
-        display: block;
+        width: 100%;
+        display: grid;
+        grid-template-columns:  repeat(1, 1fr);
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        gap: 1rem;
         padding: 0;
     }
 }
