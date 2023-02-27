@@ -47,8 +47,8 @@
 
 @media only screen and (min-width: 390px) and (max-width: 690px) {
     .footer {
-        display: grid;
-        position: relative;
+        display: block;
+        position: absolute;
     }
 
     .footer .column:nth-child(1), .footer .column:nth-child(3) {

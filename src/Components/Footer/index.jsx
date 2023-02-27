@@ -23,14 +23,14 @@ const Footer = () => {
         footerHandler().then(() => {
             const footer = document.querySelector(".footer");
 
-            if (footer) {
-                if (window.location.href.indexOf("/projects") !== -1 && window.innerWidth < 500) {
-                    footer.style.marginTop = "100vh";
-                } else {
-                    footer.style.marginTop = "0";
-                }
-                setFooterFlag(!footerFlag);
-            }
+            // if (footer) {
+            //     if (window.location.href.indexOf("/projects") !== -1 && window.innerWidth < 500) {
+            //         footer.style.marginTop = "100%";
+            //     } else {
+            //         footer.style.marginTop = "0";
+            //     }
+            //     setFooterFlag(!footerFlag);
+            // }
         });
     })
 
