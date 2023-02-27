@@ -5,24 +5,26 @@ import "./index.css";
 
 import yellowPinkLogo from "../../Assets/media/logos/yellowpink_logo.PNG";
 
-import img1 from "../../Assets/media/static_media/about/clients/1.jpeg";
+import img1 from "../../Assets/media/static_media/about/clients/1.svg";
 import img2 from "../../Assets/media/static_media/about/clients/2.svg";
-import img3 from "../../Assets/media/static_media/about/clients/3.png";
-import img4 from "../../Assets/media/static_media/about/clients/4.png";
-import img5 from "../../Assets/media/static_media/about/clients/5.png";
-import img6 from "../../Assets/media/static_media/about/clients/6.png";
-import img7 from "../../Assets/media/static_media/about/clients/7.png";
-import img8 from "../../Assets/media/static_media/about/clients/8.png";
-import img9 from "../../Assets/media/static_media/about/clients/9.png";
-import img10 from "../../Assets/media/static_media/about/clients/10.JPG";
-import img11 from "../../Assets/media/static_media/about/clients/11.PNG";
-import img12 from "../../Assets/media/static_media/about/clients/12.PNG";
-import img13 from "../../Assets/media/static_media/about/clients/13.PNG";
-import img14 from "../../Assets/media/static_media/about/clients/14.PNG";
-import img15 from "../../Assets/media/static_media/about/clients/15.PNG";
-import img16 from "../../Assets/media/static_media/about/clients/16.png";
-import img17 from "../../Assets/media/static_media/about/clients/17.png";
-import img18 from "../../Assets/media/static_media/about/clients/18.png";
+import img3 from "../../Assets/media/static_media/about/clients/3.svg";
+import img4 from "../../Assets/media/static_media/about/clients/4.svg";
+import img5 from "../../Assets/media/static_media/about/clients/5.svg";
+import img6 from "../../Assets/media/static_media/about/clients/6.svg";
+import img7 from "../../Assets/media/static_media/about/clients/7.svg";
+import img8 from "../../Assets/media/static_media/about/clients/8.svg";
+import img9 from "../../Assets/media/static_media/about/clients/9.svg";
+import img10 from "../../Assets/media/static_media/about/clients/10.svg";
+import img11 from "../../Assets/media/static_media/about/clients/11.svg";
+import img12 from "../../Assets/media/static_media/about/clients/12.svg";
+import img13 from "../../Assets/media/static_media/about/clients/13.svg";
+import img14 from "../../Assets/media/static_media/about/clients/14.svg";
+import img15 from "../../Assets/media/static_media/about/clients/15.svg";
+import img16 from "../../Assets/media/static_media/about/clients/16.svg";
+import img18 from "../../Assets/media/static_media/about/clients/18.svg";
+import img19 from "../../Assets/media/static_media/about/clients/19.svg";
+import img20 from "../../Assets/media/static_media/about/clients/20.svg";
+import img21 from "../../Assets/media/static_media/about/clients/21.svg";
 
 const About = () => {
     useEffect(() => {
@@ -79,17 +81,19 @@ const About = () => {
                             <li><img src={img7}/></li>
                             <li><img src={img8}/></li>
                             <li><img src={img9}/></li>
-                        </ul>
-                        <ul>
                             <li><img src={img10}/></li>
                             <li><img src={img11}/></li>
+                        </ul>
+                        <ul>
                             <li><img src={img12}/></li>
                             <li><img src={img13}/></li>
                             <li><img src={img14}/></li>
                             <li><img src={img15}/></li>
                             <li><img src={img16}/></li>
-                            <li><img src={img17}/></li>
                             <li><img src={img18}/></li>
+                            <li><img src={img19}/></li>
+                            <li><img src={img20}/></li>
+                            <li><img src={img21}/></li>
                         </ul>
                     </section>
                 </div>

@@ -25,6 +25,7 @@ const Projects = () => {
     useEffect(() => {
         sanityClient.fetch(
             `*[_type == "projects"]{
+                project_order_number,
                 project_title,
                 project_media,
                 project_year,
@@ -36,6 +37,7 @@ const Projects = () => {
                 project_cover
               }`
         ).then((data) => {
+            data.sort((a, b) => a.project_order_number > b.project_order_number ? 1 : -1);
             setProjectData(data);
         }).catch(console.error);
 
@@ -90,6 +92,7 @@ const Projects = () => {
                     handleLightbox(e)
                 }
             })
+            console.log(data)
         }).catch(console.error);
     }
 

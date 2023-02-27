@@ -75,6 +75,10 @@
     color: #FF0094;
 }
 
+.clients-container {
+    padding: 2rem;
+}
+
 .clients-container .row {
     margin: 1rem;
     padding: 0;
@@ -93,11 +97,13 @@
 }
 
 .clients-container .row .clients li {
-    margin: 10px;
+    margin: 1rem;
 }
 
 .clients-container .row .clients ul li img {
-    width: 100%;
+    max-width: 7vw;
+    object-fit: contain;
+    object-position: center;
 }
 
 @media only screen and (min-width: 390px) and (max-width: 690px) {

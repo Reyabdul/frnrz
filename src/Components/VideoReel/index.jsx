@@ -35,7 +35,6 @@ const VideoReel = () => {
               }`
         ).then((data) => {
             setVideoReelData(editUrlString(data[0].video_upload.asset._ref));
-            console.log(data);
         }).catch(console.error);
     }, []);
 

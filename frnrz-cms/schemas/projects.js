@@ -4,6 +4,12 @@ export default {
     title: "Projects",
     fields: [
         {
+            name: "project_order_number",
+            title: "Project Order Number",
+            description: "(1) being the first project and (20) being the last project",
+            type: "number"
+        },
+        {
             name: "project_title",
             type: "string",
             title: "Project title",
