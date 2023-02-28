@@ -17,6 +17,7 @@
     transition: all .5s ease;
 }
 
-.video-reel-container video {
+.video-reel-container iframe {
     width: 70vw;
+    height: 65vh;
 }
